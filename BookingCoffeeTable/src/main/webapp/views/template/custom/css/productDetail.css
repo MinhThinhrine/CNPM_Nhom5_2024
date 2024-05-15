@@ -1,0 +1,188 @@
+.color_btn{
+    background-color: #bf9369;
+}
+
+.color_btn:hover{
+    color: #bf9369;
+    border-color: #bf9369;
+    background: #fff;
+}
+
+.color_far{
+    color: #bf9369;
+}
+
+.form-check-input[type=radio]:checked {
+    background-image: none;
+    background-color: #fff;
+}
+
+.form-check-input[type=radio]:checked:after {
+    border-radius: 50%;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-color: #bf9369;
+    background-color: #bf9369;
+    transition: border-color;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.form-check-input:checked {
+    border-color: #bf9369;
+}
+
+.form-check-input[type=radio]:checked:after {
+    border-radius: 50%;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-color: #bf9369;
+    background-color: #bf9369;
+    transition: border-color;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.form-check-input[type=radio]:after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    z-index: 1;
+    display: block;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.form-check-input:before {
+    content: "";
+    position: absolute;
+    box-shadow: 0 0 0 13px transparent;
+    border-radius: 50%;
+    width: 0.875rem;
+    height: 0.875rem;
+    background-color: transparent;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+}
+
+.form-check-input:checked:before {
+    opacity: 0;
+
+}
+
+
+
+.form-check-input[type=radio]:before {
+    width: 1rem;
+    height: 1rem;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #bf9369;
+    border-color: #bf9369;
+}
+
+.btn:focus-visible {
+    color: #fff;;
+    background-color: #bf9369;
+}
+
+.btn-check:focus+.btn-primary, .btn-check:focus-visible+.btn-primary, .btn-primary:focus {
+    box-shadow: var(--mdb-btn-box-shadow-state);
+    background-color: #bf9369;
+    color: white;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #bf9369;
+}
+
+.review_color a{
+    color: #bf9369;
+}
+
+a {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar-brand{
+    padding-right: 20px;
+}
+
+.navbar .scroll-to-section{
+    padding-right: 40px;
+}
+
+.navbar .login_content {
+    padding-right: 0px;
+}
+
+.navbar a{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-body-tertiary.fixed-top{
+    background-color: white;
+}
+
+.navbar div li a:hover{
+    color: #bf9369;
+}
+
+@media screen and (max-width:1200px) {
+    .navbar-brand{
+        padding-right: 10px;
+    }
+
+    .navbar .scroll-to-section{
+        padding-right: 20px;
+    }
+    #top{
+        margin-top: 0px;
+    }
+
+}
+
+@media screen and (max-width:990px) {
+    .home{
+        margin-top: 20px;
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .login li{
+        width: 100%;
+    }
+
+    .scroll-to-section{
+        border-bottom: 1px solid;
+        margin-bottom: 20px;
+    }
+
+}
+
+.section-heading{
+    margin: 50px;
+}
