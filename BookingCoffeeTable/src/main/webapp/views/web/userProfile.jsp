@@ -1,3 +1,5 @@
+<%@include file="/common/taglib.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +12,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <!-- Google Fonts Roboto -->
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
+
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="../template/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../template/assets/css/font-awesome.css">
@@ -28,73 +27,15 @@
     <link rel="stylesheet" href="../template/mdb/plugins/css/all.min.css"/>
     <!-- Custom styles -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../template/custom/css/userProfile.css">
+    <link rel="stylesheet" href="../template/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 <!-- ***** Header Area Start ***** -->
-<nav class="header-area sticky-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-9">
-                <nav class="main-nav" style="display: flex">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="../template/custom/image/drink/logo2.png" style="width: 60px;" align="klassy cafe html template">
-                    </a>
-
-
-
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Trang chủ</a></li>
-                        <li class="scroll-to-section"><a href="#about">Giới thiệu</a></li>
-
-                        <!--
-                            <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="#">Drop Down Page 1</a></li>
-                                    <li><a href="#">Drop Down Page 2</a></li>
-                                    <li><a href="#">Drop Down Page 3</a></li>
-                                </ul>
-                            </li>
-                        -->
-                        <li class="scroll-to-section"><a href="#menu">Thực đơn</a></li>
-                        <li class="scroll-to-section"><a href="#menu">Bàn</a></li>
-
-                        <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                        <li class="scroll-to-section"><a href="#reservation">Liên hệ</a></li>
-
-
-
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-
-
-
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-            <div class="col-3">
-                <nav class="main-nav">
-
-                    <ul class="nav">
-                        <li class="scroll-to-section order_table"><a href="#datban">Đặt bàn</a></li>
-                        <li class="scroll-to-section"><a href="#"><span class="user_icon" style="padding-right: 10px"><i
-                                class="fa fa-user"
-                                aria-hidden="true"></i></span>Đăng nhập</a></li>
-                    </ul>
-
-
-                </nav>
-            </div>
-        </div>
-    </div>
-</nav>
-<div class="main-content">
+<%@ include file="layout/header.jsp" %>
+<!-- ***** Header Area End ***** -->
+<div class="main-content" style="margin-top: 80px">
     <div class="container">
         <div class="view-account">
             <section class="module">
@@ -112,10 +53,9 @@
                         <nav class="side-menu">
                             <ul class="nav">
                                 <li class="active"><a href="#"><span class="fa fa-user"></span> Thông tin</a></li>
-                                <li><a href="changePassword.html"><span class="fa fa-cog"></span> Thay đổi mật khẩu</a></li>
-                                <li><a href="#"><span class="fa fa-credit-card"></span> Thanh Toán</a></li>
-                                <li><a href="#"><span class="fa fa-envelope"></span> Tin Nhắn</a></li>
-                                <li><a href="historyBooking.html"><span class="fa fa-clock-o"></span> Lịch Sử</a></li>
+                                <li><a href="changePassword.jsp"><span class="fa fa-cog"></span> Thay đổi mật khẩu</a>
+                                </li>
+                                <li><a href="historyBooking.jsp"><span class="fa fa-clock-o"></span> Lịch Sử</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -138,44 +78,38 @@
                                 <div class="form-group row">
                                     <label class="col-md-2 col-sm-3 col-xs-12 control-label">Tên Đăng Nhập</label>
                                     <div class="col-md-10 col-sm-9 col-xs-12">
-                                        <input type="text" class="form-control" value="Rebecca">
+                                        <input type="text" class="form-control" value="huutinh" disabled>
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label class="col-md-2 col-sm-3 col-xs-12 control-label">Mật Khẩu</label>
-                                    <div class="col-md-10 col-sm-9 col-xs-12">
-                                        <input type="password" class="form-control" value="Rebecca">
-                                    </div>
-                                </div>
+
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <h3 class="fieldset-title">Contact Info</h3>
                                 <div class="form-group row">
                                     <label class="col-md-2 col-sm-3 col-xs-12 control-label">Họ Và Tên</label>
                                     <div class="col-md-10 col-sm-9 col-xs-12">
                                         <input type="text" class="form-control" value="Sanders">
                                     </div>
                                 </div>
-                            </fieldset>
-                            <fieldset class="fieldset">
-                                <h3 class="fieldset-title">Contact Info</h3>
                                 <div class="form-group row">
                                     <label class="col-md-2  col-sm-3 col-xs-12 control-label">Email</label>
                                     <div class="col-md-10 col-sm-9 col-xs-12">
                                         <input type="email" class="form-control" value="Rebecca@website.com">
-                                        <p class="help-block">Đây là email </p>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-2  col-sm-3 col-xs-12 control-label">Số Điện Thoại</label>
                                     <div class="col-md-10 col-sm-9 col-xs-12">
                                         <input type="number" class="form-control" value="SpeedyBecky">
-                                        <p class="help-block">Số điện thoại của bạn</p>
                                     </div>
                                 </div>
                             </fieldset>
                             <hr>
                             <div class="form-group row">
                                 <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
-                                    <input class="btn btn-primary" type="submit" value="Update Profile">
+                                    <input class="btn text-white" style="background-color: #bf9369" type="submit"
+                                           value="Update Profile" style="background-color: #bf9369; color: white">
                                 </div>
                             </div>
                         </form>
@@ -185,63 +119,19 @@
         </div>
     </div>
 </div>
-<!-- ***** Footer Start *****-->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-xs-12">
-                <div class="right-text-content">
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="logo">
-                    <a href="home.html"><img src="../template/assets/images/white-logo.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xs-12">
-                <div class="left-text-content">
-                    <p>© Copyright Klassy Cafe Co.
-
-                        <br>Design: TemplateMo</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+<!-- ***** Footer Start ***** -->
+<%@ include file="layout/footer.jsp" %>
+<!-- ***** Footer End ***** -->
 
 <!-- jQuery -->
 <script src="../template/assets/js/jquery-2.1.0.min.js"></script>
 
-<!-- Bootstrap -->
-<script src="../template/assets/js/popper.js"></script>
-<script src="../template/assets/js/bootstrap.min.js"></script>
 
 <!-- Global Init -->
-<script src="../template/assets/js/custom.js"></script>
-<script>
 
-    $(function () {
-        var selectedClass = "";
-        $("p").click(function () {
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-            $("#portfolio div").not("." + selectedClass).fadeOut();
-            setTimeout(function () {
-                $("." + selectedClass).fadeIn();
-                $("#portfolio").fadeTo(50, 1);
-            }, 500);
-
-        });
-    });
-
-</script>
 <!-- MDB PLUGINS -->
+<script type="text/javascript" src="../template/mdb/js/mdb.min.js"></script>
 <script type="text/javascript" src="../template/mdb/plugins/js/all.min.js"></script>
+<script src="../template/mdb/js/mdb.umd.min.js"></script>
 </body>
 </html>

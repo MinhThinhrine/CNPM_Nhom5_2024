@@ -1,3 +1,5 @@
+<%@include file="/common/taglib.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,21 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-
     <title>Menu</title>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="../template/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../template/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="../template/assets/css/templatemo-klassy-cafe.css">
     <link rel="stylesheet" href="../template/assets/css/owl-carousel.css">
-    <link rel="stylesheet" href="../template/assets/css/lightbox.css">
-    <link rel="stylesheet" href="../template/assets/css/stylle.css">
 
     <!-- MDB ESSENTIAL -->
     <link rel="stylesheet" href="../template/mdb/css/mdb.min.css"/>
@@ -29,58 +22,16 @@
     <link rel="stylesheet" href="../template/mdb/plugins/css/all.min.css"/>
 
     <!-- Custom css-->
-    <link rel="stylesheet" href="../template/custom/css/bookingTable.css">
+    <link rel="stylesheet" href="../template/custom/css/table.css">
 
 </head>
 
 <body>
 <!-- ***** Header Area Start ***** -->
-<nav class="header-area sticky-top"
-     style="box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px">
-    <div class="container">
-        <div class="row">
-            <div class="col-9">
-                <nav class="main-nav" style="display: flex">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="home.html" class="logo">
-                        <img src="../template/custom/image/drink/logo2.png" style="width: 60px;"
-                             align="klassy cafe html template">
-                    </a>
-
-
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a id="trangchu" href="home.html">Trang chủ</a></li>
-                        <li class="scroll-to-section"><a href="table.html" style="color: #bf9369">Bàn</a></li>
-                        <li class="scroll-to-section"><a href="menu.html">Thực đơn</a></li>
-                        <li class="scroll-to-section"><a id="gioithieu" href="about.html">Giới thiệu</a></li>
-                        <li class="scroll-to-section"><a href="contactUS.html">Liên hệ</a></li>
-                        <li class="scroll-to-section"><a href="post.html">Bài viết</a></li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-            <div class="col-3">
-                <nav class="main-nav">
-
-                    <ul class="nav">
-                        <li class="scroll-to-section order_table"><a href="bill.html">Đặt bàn</a></li>
-                        <li class="scroll-to-section"><a href="login.html"><span class="user_icon" style="padding-right: 10px"><i
-                                class="fa fa-user"
-                                aria-hidden="true"></i></span>Đăng nhập</a></li>
-                    </ul>
-
-
-                </nav>
-            </div>
-        </div>
-    </div>
-</nav>
+<%@ include file="layout/header.jsp"%>
 <!-- ***** Header Area End ***** -->
 
-<div class="main_content mt-5">
+<div class="main_content" style="margin-top: 100px">
 
     <!--Main layout-->
     <main class="mb-6">
@@ -149,7 +100,7 @@
 
                         <form class="d-flex justify-content-between flex-wrap">
                             <!-- Ngày Đặt -->
-                            <div class="col-md-2 mb-3">
+                            <div class=" col-md-2 mb-3">
                                 <label for="filterDate" class="form-label ">Ngày Đặt:</label>
                                 <input type="date" class="form-control" id="filterDate">
                             </div>
@@ -171,8 +122,7 @@
                                     <option value="2">Trong nhà</option>
                                     <option value="3">Ban công</option>
                                     <option value="3">Cửa sổ</option>
-                                    <option value="3">Sân vườn</option>
-                                    <option value="3">Máy lạnh</option>
+                                    <option value="3">Quầy bar</option>
                                 </select>
                             </div>
                             <!-- Số người -->
@@ -181,9 +131,9 @@
                                 <input type="number" class="form-control" id="filterPeople" min="1">
                             </div>
                             <!-- Nút Áp Dụng -->
-                            <div class="col-md-2 mb-3 ">
+                            <div class="col-md-2 mb-3 d-flex align-items-end pb-1 justify-content-center">
 
-                                <div style="padding-top: 22%; padding-left: 20%">
+                                <div>
                                     <button type="button" class="btn btn-primary  " onclick="applyFilter()">Tìm kiếm
                                     </button>
                                 </div>
@@ -206,7 +156,7 @@
                                         <h4>Số bàn: 101</h4>
                                         <h4>chỗ ngồi: 5 người</h4>
                                         <h4>Vị trí: cửa sổ</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
 
@@ -228,9 +178,10 @@
                                     <!--                                    </div>-->
                                     <div class="hover-overlay table_omega text-center">
                                         <br>
-                                        <h4>Số lượng: 10</h4>
+                                        <h4>Số bàn: 102</h4>
+                                        <h4>chỗ ngồi: 2 người</h4>
                                         <h4>Vị trí: cửa sổ</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
                                 </div>
@@ -250,9 +201,10 @@
                                     <!--                                    </div>-->
                                     <div class="hover-overlay table_omega text-center">
                                         <br>
-                                        <h4>Số lượng: 10</h4>
+                                        <h4>Số bàn: 103</h4>
+                                        <h4>chỗ ngồi: 4 người</h4>
                                         <h4>Vị trí: cửa sổ</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
                                 </div>
@@ -272,9 +224,10 @@
                                     <!--                                    </div>-->
                                     <div class="hover-overlay table_omega text-center">
                                         <br>
-                                        <h4>Số lượng: 10</h4>
+                                        <h4>Số bàn: 104</h4>
+                                        <h4>chỗ ngồi: 1 người</h4>
                                         <h4>Vị trí: cửa sổ</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
                                 </div>
@@ -294,9 +247,9 @@
                                     <!--                                    </div>-->
                                     <div class="hover-overlay table_omega text-center">
                                         <br>
-                                        <h4>Số lượng: 10</h4>
+                                        <h4>Số bàn: 105</h4>
                                         <h4>Vị trí: trong nhà</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
                                 </div>
@@ -314,9 +267,10 @@
 
                                     <div class="hover-overlay table_omega text-center">
                                         <br>
-                                        <h4>Số lượng: 10</h4>
-                                        <h4>Vị trí: sân vườn</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <h4>Số bàn: 106</h4>
+                                        <h4>chỗ ngồi: 6 người</h4>
+                                        <h4>Vị trí: trong nhà</h4>
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
                                 </div>
@@ -336,9 +290,10 @@
                                     <!--                                    </div>-->
                                     <div class="hover-overlay table_omega text-center">
                                         <br>
-                                        <h4>Số lượng: 10</h4>
+                                        <h4>Số bàn: 107</h4>
+                                        <h4>chỗ ngồi: 4 người</h4>
                                         <h4>Vị trí: tầng thượng</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
                                 </div>
@@ -358,9 +313,10 @@
                                     <!--                                    </div>-->
                                     <div class="hover-overlay table_omega text-center">
                                         <br>
-                                        <h4>Số lượng: 10</h4>
+                                        <h4>Số bàn: 108</h4>
+                                        <h4>chỗ ngồi: 5 người</h4>
                                         <h4>Vị trí: cửa sổ</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
                                 </div>
@@ -380,9 +336,10 @@
                                     <!--                                    </div>-->
                                     <div class="hover-overlay table_omega text-center">
                                         <br>
-                                        <h4>Số lượng: 10</h4>
+                                        <h4>Số bàn: 109</h4>
+                                        <h4>chỗ ngồi: 5 người</h4>
                                         <h4>Vị trí: cửa sổ</h4>
-                                        <a href="home.html" class="btn btn-primary" style="text-transform: uppercase">Chọn
+                                        <a href="home.jsp" class="btn btn-primary" style="text-transform: uppercase">Chọn
                                             bàn</a>
                                     </div>
                                 </div>
@@ -391,7 +348,7 @@
 
                         </div>
                     </div>
-                    <div class="next_button col-8 col-lg-6 d-flex justify-content-end mt-2 ml-5">
+                    <div class="next_button col d-flex justify-content-center mt-2">
                         <a style="text-transform: uppercase; font-family: Roboto; color: #bf9369" href="">Xem thêm</a>
                     </div>
                 </div>
@@ -411,130 +368,18 @@
 
 
 </div>
-<footer class="text-white text-center text-lg-start" style="background-color: #7E644B;">
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4 ">Về chúng tôi</h5>
-
-                <div>
-                    <img src="../template/custom/image/drink/logo2.png" style="width: 60px;" class="mb-4" alt="">
-
-                    <p class="text-white">
-                        Coffee Shop, là điểm hẹn lý tưởng cho những buổi gặp gỡ, những cuộc trò chuyện và những khoảnh
-                        khắc
-                        thư giãn.
-                    </p>
-
-                    <p class="text-white">
-                        Chúng tôi mong được phục vụ và làm hài lòng bạn, mỗi khi bạn đặt bàn tại đây.
-                    </p>
-                </div>
-
-                <div class="mt-4">
-                    <!-- Facebook -->
-                    <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-facebook-f"></i></a>
-                    <!-- Dribbble -->
-                    <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-dribbble"></i></a>
-                    <!-- Twitter -->
-                    <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-twitter"></i></a>
-                    <!-- Google + -->
-                    <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-google-plus-g"></i></a>
-                    <!-- Linkedin -->
-                </div>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Tính năng nổi bật</h5>
-
-                <ul class="fa-ul" style="margin-left: 1.65em;">
-                    <li class="mb-3">
-                        <span class="ms-2">Trang chủ</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="ms-2">Khám phá thực đơn</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="ms-2">Xem danh sách bàn</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="ms-2">Đặt bàn ngay</span>
-                    </li>
-
-                </ul>
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4 pb-1">Liên hệ</h5>
-
-                <ul class="fa-ul" style="margin-left: 1.65em;">
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-home"></i></span><span
-                            class="ms-2">Trường ĐH Nông Lâm TP.HCM</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-envelope"></i></span><span
-                            class="ms-2">info@example.com</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234 567 88</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+ 01 234 567 89</span>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Giờ mở cửa</h5>
-
-                <table class="table  text-white">
-                    <tbody class="font-weight-normal">
-                    <tr>
-                        <td>Thứ 2 - Thứ 6:</td>
-                        <td>6h00 - 22h30</td>
-                    </tr>
-                    <tr>
-                        <td>Thứ 7 - Chủ nhật:</td>
-                        <td>6h00 - 23h00</td>
-                    </tr>
-
-                    </tbody>
-                </table>
-                <tr>
-                    <a href="http://online.gov.vn/" target="_blank" rel="nofollow noreferrer">
-                        <img src="https://file.hstatic.net/1000300454/file/logo_bct_019590229b4c4dfda690236b67f7aff4.png"
-                             alt="Bộ Công Thương">
-                    </a>
-                </tr>
-            </div>
-            <!--Grid column-->
-        </div>
-        <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-
-</footer>
+<!-- ***** Footer Start ***** -->
+<%@ include file="layout/footer.jsp"%>
+<!-- ***** Footer End ***** -->
 <!-- jQuery -->
 <script src="../template/assets/js/jquery-2.1.0.min.js"></script>
+<!---->
 
-<!-- Bootstrap -->
-<script src="../template/assets/js/popper.js"></script>
-<script src="../template/assets/js/bootstrap.min.js"></script>
+
 
 <script type="text/javascript" src="../template/mdb/js/mdb.min.js"></script>
-<!-- MDB PLUGINS -->
 <script type="text/javascript" src="../template/mdb/plugins/js/all.min.js"></script>
-<script>
-
-</script>
+<script src="../template/mdb/js/mdb.umd.min.js"></script>
 
 </body>
 </html>

@@ -1,3 +1,5 @@
+<%@include file="/common/taglib.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,21 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
     <title>Menu</title>
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="../template/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../template/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="../template/assets/css/templatemo-klassy-cafe.css">
     <link rel="stylesheet" href="../template/assets/css/owl-carousel.css">
-    <link rel="stylesheet" href="../template/assets/css/lightbox.css">
-    <link rel="stylesheet" href="../template/assets/css/stylle.css">
 
     <!-- MDB ESSENTIAL -->
     <link rel="stylesheet" href="../template/mdb/css/mdb.min.css"/>
@@ -31,74 +24,19 @@
     <!-- Custom css-->
     <link rel="stylesheet" href="../template/custom/css/menu.css">
 
+
 </head>
 
 <body>
 <!-- ***** Header Area Start ***** -->
-<nav class="header-area sticky-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-9">
-                <nav class="main-nav" style="display: flex">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="../template/custom/image/drink/logo2.png" style="width: 60px;"
-                             align="klassy cafe html template">
-                    </a>
-
-
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Trang chủ</a></li>
-                        <li class="scroll-to-section"><a href="#about">Giới thiệu</a></li>
-
-                        <!--
-                            <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="#">Drop Down Page 1</a></li>
-                                    <li><a href="#">Drop Down Page 2</a></li>
-                                    <li><a href="#">Drop Down Page 3</a></li>
-                                </ul>
-                            </li>
-                        -->
-                        <li class="scroll-to-section"><a href="#menu">Thực đơn</a></li>
-                        <li class="scroll-to-section"><a href="#menu">Bàn</a></li>
-
-                        <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                        <li class="scroll-to-section"><a href="#reservation">Liên hệ</a></li>
-
-
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-
-
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-            <div class="col-3">
-                <nav class="main-nav">
-
-                    <ul class="nav">
-                        <li class="scroll-to-section order_table"><a href="#datban">Đặt bàn</a></li>
-                        <li class="scroll-to-section"><a href="#"><span class="user_icon" style="padding-right: 10px"><i
-                                class="fa fa-user"
-                                aria-hidden="true"></i></span>Đăng nhập</a></li>
-                    </ul>
-
-
-                </nav>
-            </div>
-        </div>
-    </div>
-</nav>
+<%@ include file="layout/header.jsp"%>
 <!-- ***** Header Area End ***** -->
 
-<div class="main_content">
+
+<div class="main_content" style="margin-top: 80px">
 
     <!--Main layout-->
-    <main class="mb-6">
+    <main class="mb-6 mt-2">
         <div class="container">
             <div class="row gx-lg-5">
                 <div class="col-lg-3 d-none d-lg-block mt-2">
@@ -167,19 +105,19 @@
                                         data-mdb-value="4"
                                 >
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                 </ul>
                                 <small class="text-muted">& Lớn hơn</small>
@@ -193,19 +131,19 @@
                                         data-mdb-value="3"
                                 >
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                 </ul>
                                 <small class="text-muted">& Lớn hơn</small>
@@ -219,19 +157,19 @@
                                         data-mdb-value="2"
                                 >
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                 </ul>
                                 <small class="text-muted">& Lớn hơn</small>
@@ -245,19 +183,19 @@
                                         data-mdb-value="1"
                                 >
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                     <li>
-                                        <i class="far fa-star fa-sm text-primary"></i>
+                                        <i class="far fa-star fa-sm color_far"></i>
                                     </li>
                                 </ul>
                                 <small class="text-muted">& Lớn hơn</small>
@@ -275,7 +213,7 @@
                                         type="radio"
                                         name="radioForm"
                                         id="radioCondition1"
-                                        checked
+
                                 />
                                 <label class="form-check-label" for="radioCondition1">
                                     Dưới 25.000đ
@@ -336,14 +274,15 @@
                                 >
                                     <i class="fas fa-th-list fa-lg"></i>
                                 </button>
-                                <button class="btn btn-link btn-floating text-reset btn-lg">
-                                    <i class="fas fa-th-large fa-lg"></i>
-                                </button>
+<!--                                <button class="btn btn-link btn-floating text-reset btn-lg">-->
+<!--                                    <i class="fas fa-th-large fa-lg"></i>-->
+<!--                                </button>-->
                             </div>
 
                             <div class="col-8 col-lg-6 d-flex justify-content-end mt-2">
                                 <select class="select">
-                                    <option value="1">Bán chạy nhất</option>
+                                    <!--                                    <option value="1">Bán chạy nhất</option>-->
+                                    <option value="1">Tên</option>
                                     <option value="2">Giá thấp nhất</option>
                                     <option value="3">Giá cao nhất</option>
                                 </select>
@@ -375,14 +314,13 @@
                                     >
                                         <img
 
-
                                                 src="../template/custom/image/menu/lemon.jpg"
 
 
                                                 class="w-100"
                                                 alt=""/>
 
-                                        <a href="#!">
+                                        <a href="productDetail.jsp">
                                             <div class="mask">
                                                 <div
                                                         class="
@@ -409,8 +347,7 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Lemon Fruit</p>
-                                        <p class="text-muted mb-2">Fruits</p>
+                                        <p class="fw-bold mb-2">Nước chanh</p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -419,31 +356,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -454,7 +391,7 @@
                                         </h5>
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -479,7 +416,7 @@
                                             data-ripple-color="light"
                                     >
                                         <img
-                                                src="../template/custom/image/menu/martini.jpg"
+                                                src="../template/custom/image/drink/atiso.jpg"
                                                 class="w-100"
                                                 alt=""
                                         />
@@ -497,9 +434,6 @@
                   <span class="badge badge-primary rounded-pill me-2"
                   >New</span
                   >
-                                                    <span class="badge badge-success rounded-pill"
-                                                    >Eco</span
-                                                    >
                                                 </div>
                                             </div>
                                             <div class="hover-overlay">
@@ -513,8 +447,7 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Martini</p>
-                                        <p class="text-muted mb-2">Wine</p>
+                                        <p class="fw-bold mb-2">Sinh tố atiso</p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -523,31 +456,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -557,7 +490,7 @@
                                         </h5>
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -581,7 +514,7 @@
                                             data-ripple-color="light"
                                     >
                                         <img
-                                                src="../template/custom/image/menu/vodka.jpg"
+                                                src="../template/custom/image/menu/cookie_cream.jpg"
                                                 class="w-100"
                                                 alt=""
                                         />
@@ -608,8 +541,7 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Vodka</p>
-                                        <p class="text-muted mb-2">Wine</p>
+                                        <p class="fw-bold mb-2">Sinh tố bánh quy</p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -618,31 +550,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -653,7 +585,7 @@
 
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -705,7 +637,6 @@
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
                                         <p class="fw-bold mb-2">Mojito</p>
-                                        <p class="text-muted mb-2">Wine</p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -714,31 +645,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -749,7 +680,7 @@
 
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -800,8 +731,7 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Strawbery</p>
-                                        <p class="text-muted mb-2">Fruits</p>
+                                        <p class="fw-bold mb-2">Sinh tố dâu</p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -810,31 +740,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -845,7 +775,7 @@
 
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -869,7 +799,7 @@
                                             data-ripple-color="light"
                                     >
                                         <img
-                                                src="../template/custom/image/menu/champagne.jpg"
+                                                src="../template/custom/image/menu/cream_vanila.jpg"
                                                 class="w-100"
                                                 alt=""
                                         />
@@ -896,8 +826,8 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Champagne</p>
-                                        <p class="text-muted mb-2">Wine</p>
+                                        <p class="fw-bold mb-2">Chocalate đá xay</p>
+
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -906,31 +836,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -941,7 +871,7 @@
 
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -1001,8 +931,7 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Coffee Cream</p>
-                                        <p class="text-muted mb-2">Coffee</p>
+                                        <p class="fw-bold mb-2">Cà phê kem </p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -1011,42 +940,42 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
                                         </ul>
                                         <h5 class="mb-3">
-                                            <s class="text-muted me-2 small align-middle">20.000đ</s
-                                            ><span class="align-middle">35.000đ</span>
+                                            <s class="text-muted me-2 small align-middle">35.000đ</s
+                                            ><span class="align-middle">20.000đ</span>
                                         </h5>
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -1089,9 +1018,6 @@
                   <span class="badge badge-primary rounded-pill me-2"
                   >New</span
                   >
-                                                    <span class="badge badge-success rounded-pill"
-                                                    >Eco</span
-                                                    >
                                                 </div>
                                             </div>
                                             <div class="hover-overlay">
@@ -1105,8 +1031,8 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Dalgona</p>
-                                        <p class="text-muted mb-2">Coffee</p>
+                                        <p class="fw-bold mb-2">Cà phê bọt biển</p>
+
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -1115,31 +1041,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -1149,7 +1075,7 @@
                                         </h5>
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -1173,7 +1099,7 @@
                                             data-ripple-color="light"
                                     >
                                         <img
-                                                src="../template/custom/image/menu/kiwi.jpg"
+                                                src="../template/custom/image/menu/kiwi2.jpg"
                                                 class="w-100"
                                                 alt=""
                                         />
@@ -1200,8 +1126,7 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Kiwi</p>
-                                        <p class="text-muted mb-2">Fruits</p>
+                                        <p class="fw-bold mb-2">Sinh tố Kiwi</p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -1210,31 +1135,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -1245,7 +1170,7 @@
 
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -1296,8 +1221,7 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Mango</p>
-                                        <p class="text-muted mb-2">Fruits</p>
+                                        <p class="fw-bold mb-2">Nước ép xoài</p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -1306,31 +1230,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -1341,7 +1265,7 @@
 
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -1392,8 +1316,7 @@
 
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
-                                        <p class="fw-bold mb-2">Kombucha</p>
-                                        <p class="text-muted mb-2">Fruits</p>
+                                        <p class="fw-bold mb-2">Trái cây lên men</p>
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -1402,31 +1325,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -1437,7 +1360,7 @@
 
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -1489,7 +1412,7 @@
                                     <!-- Product content -->
                                     <div class="px-3 text-reset d-block">
                                         <p class="fw-bold mb-2">Chocolate</p>
-                                        <p class="text-muted mb-2"><Socola></Socola></p>
+                                        <!--                                        <p class="text-muted mb-2">></Socola></p>-->
                                         <ul
                                                 class="rating mb-2"
                                                 data-mdb-toggle="rating"
@@ -1498,31 +1421,31 @@
                                         >
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary ps-0"
+                                                        class="far fa-star fa-sm color_far ps-0"
                                                         title="Bad"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Poor"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="OK"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Good"
                                                 ></i>
                                             </li>
                                             <li>
                                                 <i
-                                                        class="far fa-star fa-sm text-primary"
+                                                        class="far fa-star fa-sm color_far"
                                                         title="Excellent"
                                                 ></i>
                                             </li>
@@ -1533,7 +1456,7 @@
 
                                         <button
                                                 type="button"
-                                                class="btn btn-primary btn-rounded w-100"
+                                                class="btn btn-primary btn-rounded w-100 color_btn"
                                         >
                                             <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                         </button>
@@ -1578,8 +1501,8 @@
                 </div>
             </div>
         </div>
-</main>
-<!--Main layout-->
+    </main>
+    <!--Main layout-->
 
 </div>
 <!-- ***** Main Banner Area Start ***** -->
@@ -1587,47 +1510,19 @@
 <!-- ***** Main Banner Area End ***** -->
 
 <!-- ***** Footer Start ***** -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-xs-12">
-                <div class="right-text-content">
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="logo">
-                    <a href="home.html"><img src="../template/assets/images/white-logo.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xs-12">
-                <div class="left-text-content">
-                    <p>© Copyright Klassy Cafe Co.
-
-                        <br>Design: TemplateMo</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+<%@ include file="layout/footer.jsp"%>
+<!-- ***** Footer End ***** -->
 
 <!-- jQuery -->
 <script src="../template/assets/js/jquery-2.1.0.min.js"></script>
+<!---->
 
-<!-- Bootstrap -->
-<script src="../template/assets/js/bootstrap.min.js"></script>
-
+<!-- Plugins -->
 
 <!-- Global Init -->
-<script src="../template/assets/js/custom.js"></script>
 
 <script type="text/javascript" src="../template/mdb/js/mdb.min.js"></script>
-<!-- MDB PLUGINS -->
 <script type="text/javascript" src="../template/mdb/plugins/js/all.min.js"></script>
+<script src="../template/mdb/js/mdb.umd.min.js"></script>
 </body>
 </html>

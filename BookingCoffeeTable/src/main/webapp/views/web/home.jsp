@@ -1,3 +1,5 @@
+<%@include file="/common/taglib.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,255 +9,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
-    <!--
+    <title>Home</title>
 
-    TemplateMo 558 Klassy Cafe
-
-    https://templatemo.com/tm-558-klassy-cafe
-
-    -->
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="../template/assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="../template/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="<c:url value="/views/template/assets/css/owl-carousel.css"/> ">
+    <link rel="stylesheet" href="<c:url value="/views/template/assets/css/lightbox.css"/> ">
+    <link rel="stylesheet" href="<c:url value="/views/template/assets/css/stylle.css"/> ">
+    <link rel="stylesheet" href="<c:url value="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />"/>
+    <link rel="stylesheet" href="<c:url value="/views/template/mdb/css/mdb.min.css"/> "/>
 
-    <link rel="stylesheet" href="../template/assets/css/templatemo-klassy-cafe.css">
-
-    <link rel="stylesheet" href="../template/assets/css/owl-carousel.css">
-
-    <link rel="stylesheet" href="../template/assets/css/lightbox.css">
-    <link rel="stylesheet" href="../template/assets/css/stylle.css">
-    <link rel="stylesheet" href="../template/custom/css/home.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
-    <link rel="stylesheet" href="../template/mdb/css/mdb.min.css"/>
     <!-- MDB PLUGINS -->
-    <link rel="stylesheet" href="../template/mdb/plugins/css/all.min.css"/>
-
-
-    <style>
-
-    </style>
-
-
+    <link rel="stylesheet" href="<c:url value="/views/template/mdb/plugins/css/all.min.css"/> "/>
+    <link rel="stylesheet" href="<c:url value="/views/template/custom/css/home.css"/> ">
 </head>
-
 <body>
 
-<!-- ***** Preloader Start ***** -->
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-<!-- ***** Preloader End ***** -->
-
-
 <!-- ***** Header Area Start ***** -->
-<nav class="header-area sticky-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-9">
-                <nav class="main-nav" style="display: flex">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="../template/custom/image/drink/logo2.png" style="width: 60px;"
-                             align="klassy cafe html template">
-                    </a>
-
-
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Trang chủ</a></li>
-                        <li class="scroll-to-section"><a href="#about">Giới thiệu</a></li>
-
-                        <!--
-                            <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="#">Drop Down Page 1</a></li>
-                                    <li><a href="#">Drop Down Page 2</a></li>
-                                    <li><a href="#">Drop Down Page 3</a></li>
-                                </ul>
-                            </li>
-                        -->
-                        <li class="scroll-to-section"><a href="#menu">Thực đơn</a></li>
-                        <li class="scroll-to-section"><a href="#menu">Bàn</a></li>
-
-                        <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                        <li class="scroll-to-section"><a href="#reservation">Liên hệ</a></li>
-
-
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-
-
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-            <div class="col-3">
-                <nav class="main-nav">
-
-                    <ul class="nav">
-                        <li class="scroll-to-section order_table"><a href="#datban">Đặt bàn</a></li>
-                        <li class="scroll-to-section"><a href="#"><span class="user_icon" style="padding-right: 10px"><i
-                                class="fa fa-user"
-                                aria-hidden="true"></i></span>Đăng nhập</a></li>
-                    </ul>
-
-
-                </nav>
-            </div>
-        </div>
-    </div>
-</nav>
+<%@ include file="layout/header.jsp" %>
 <!-- ***** Header Area End ***** -->
 
 <!-- ***** Main Banner Area Start ***** -->
-<div id="top">
+<div id="top" style="margin-top: 80px">
     <div class="container-fluid">
         <!-- Swiper -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
 
-                    <img src="../template/custom/image/drink/background1.jpg">
+                    <img src="/views/template/custom/image/home/background1.jpg">
                     <div class="alpha">
                         <div class="slide_booking">
                             <div>
-                            <span>CÀ PHÊ</span>
-                            <a href="#">KHÁM PHÁ</a>
-                        </div>
+                                <span>COFFEE SHOP</span>
+                                <a href="table.jsp">ĐẶT BÀN NGAY</a>
+                            </div>
                         </div>
                     </div>
                     <div class="beta">
                         <div class="">
-                            <h5 class="text-uppercase mb-lg-5 mb-sm-0">Opening hours</h5>
-<div>
-    <h6 class="mb-lg-4 mb-sm-0">Mon - Thu: 8am - 9pm</h6>
-    <h6 class="mb-lg-4 mb-sm-0">Fri - Sat: 8am - 1am</h6>
-    <h6>Sunday: 9am - 10pm</h6>
-</div>
+                            <h5 class="text-uppercase mb-lg-5 mb-sm-0">Giờ mở cửa</h5>
+                            <div>
+                                <h6 class="mb-lg-4 mb-sm-0">Thứ hai - Thứ năm: 8h00 - 21h00</h6>
+                                <h6 class="mb-lg-4 mb-sm-0">Thứ sáu - Thứ bảy: 8h00 - 1h00</h6>
+                                <h6>Chủ nhật: 9h00 - 22h00</h6>
+                            </div>
                         </div>
                     </div>
-<!--                    <div class="omega">-->
-
-<!--                            <div class="left-text-content" style="width: 45%">-->
-<!--                                <div class="section-heading">-->
-<!--                                    <h1 style="color: #ffffff; text-align: left;"><strong><span-->
-<!--                                            style="color: #ffffff; font-family: 'times new roman', times, serif; font-size: 36pt;">About Us</span></strong>-->
-<!--                                    </h1>-->
-<!--                                    <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Chào mừng đến với Coffee Shop - Nơi Tận Hưởng Cảm Xúc Mỗi Góc Nhìn!</span>-->
-<!--                                    <br>-->
-<!--                                    <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Quán cà phê của chúng tôi không chỉ là không gian, nó là một câu chuyện kể về hương vị và mùi thơm của những hạt cà phê tinh tế, là âm nhạc dịu dàng trải qua từng khoảnh khắc, và là sự chân thành trong mỗi ly cà phê mà chúng tôi phục vụ..</span>-->
-<!--                                    <br>-->
-<!--                                    <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Hãy để chúng tôi, Coffee Shop, là điểm hẹn lý tưởng cho những buổi gặp gỡ, những cuộc trò chuyện và những khoảnh khắc thư giãn. Chúng tôi mong được phục vụ và làm hài lòng bạn, mỗi khi bạn đặt bàn tại đây.</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
-<!--                    </div>-->
                 </div>
                 <div class="swiper-slide">
-                    <img src="../template/custom/image/drink/background2.jpg">
+                    <img src="../template/custom/image/home/background2.jpg">
                     <div class="alpha">
                         <div class="slide_booking">
                             <div>
-                                <span>CÀ PHÊ</span>
-                                <a href="#">KHÁM PHÁ</a>
+                                <span>COFFEE SHOP</span>
+                                <a href="table.jsp">ĐẶT BÀN NGAY</a>
                             </div>
                         </div>
                     </div>
                     <div class="beta">
                         <div class="">
-                            <h5 class="text-uppercase mb-lg-5 mb-sm-0">Opening hours</h5>
+                            <h5 class="text-uppercase mb-lg-5 mb-sm-0">Giờ mở cửa</h5>
                             <div>
-                                <h6 class="mb-lg-4 mb-sm-0">Mon - Thu: 8am - 9pm</h6>
-                                <h6 class="mb-lg-4 mb-sm-0">Fri - Sat: 8am - 1am</h6>
-                                <h6>Sunday: 9am - 10pm</h6>
+                                <h6 class="mb-lg-4 mb-sm-0">Thứ hai - Thứ năm: 8h00 - 21h00</h6>
+                                <h6 class="mb-lg-4 mb-sm-0">Thứ sáu - Thứ bảy: 8h00 - 1h00</h6>
+                                <h6>Chủ nhật: 9h00 - 22h00</h6>
                             </div>
                         </div>
                     </div>
-<!--                    <div class="omega">-->
 
-<!--                        <div class="left-text-content" style="width: 45%">-->
-<!--                            <div class="section-heading">-->
-<!--                                <h1 style="color: #ffffff; text-align: left;"><strong><span-->
-<!--                                        style="color: #ffffff; font-family: 'times new roman', times, serif; font-size: 36pt;">About Us</span></strong>-->
-<!--                                </h1>-->
-<!--                                <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Chào mừng đến với Coffee Shop - Nơi Tận Hưởng Cảm Xúc Mỗi Góc Nhìn!</span>-->
-<!--                                <br>-->
-<!--                                <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Quán cà phê của chúng tôi không chỉ là không gian, nó là một câu chuyện kể về hương vị và mùi thơm của những hạt cà phê tinh tế, là âm nhạc dịu dàng trải qua từng khoảnh khắc, và là sự chân thành trong mỗi ly cà phê mà chúng tôi phục vụ..</span>-->
-<!--                                <br>-->
-<!--                                <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Hãy để chúng tôi, Coffee Shop, là điểm hẹn lý tưởng cho những buổi gặp gỡ, những cuộc trò chuyện và những khoảnh khắc thư giãn. Chúng tôi mong được phục vụ và làm hài lòng bạn, mỗi khi bạn đặt bàn tại đây.</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-<!--                    </div>-->
                 </div>
                 <div class="swiper-slide">
-                    <img src="../template/custom/image/drink/background3.jpg">
+                    <img src="../template/custom/image/home/background3.jpg">
                     <div class="alpha">
                         <div class="slide_booking">
                             <div>
-                                <span>CÀ PHÊ</span>
-                                <a href="#">KHÁM PHÁ</a>
+                                <span>COFFEE SHOP</span>
+                                <a href="table.jsp">ĐẶT BÀN NGAY</a>
                             </div>
                         </div>
                     </div>
                     <div class="beta">
                         <div class="">
-                            <h5 class="text-uppercase mb-lg-5 mb-sm-0">Opening hours</h5>
+                            <h5 class="text-uppercase mb-lg-5 mb-sm-0">Giờ mở cửa</h5>
                             <div>
-                                <h6 class="mb-lg-4 mb-sm-0">Mon - Thu: 8am - 9pm</h6>
-                                <h6 class="mb-lg-4 mb-sm    -0">Fri - Sat: 8am - 1am</h6>
-                                <h6>Sunday: 9am - 10pm</h6>
+                                <h6 class="mb-lg-4 mb-sm-0">Thứ hai - Thứ năm: 8h00 - 21h00</h6>
+                                <h6 class="mb-lg-4 mb-sm-0">Thứ sáu - Thứ bảy: 8h00 - 1h00</h6>
+                                <h6>Chủ nhật: 9h00 - 22h00</h6>
                             </div>
                         </div>
                     </div>
-<!--                    <div class="omega">-->
-
-<!--                        <div class="left-text-content" style="width: 45%">-->
-<!--                            <div class="section-heading">-->
-<!--                                <h1 style="color: #ffffff; text-align: left;"><strong><span-->
-<!--                                        style="color: #ffffff; font-family: 'times new roman', times, serif; font-size: 36pt;">About Us</span></strong>-->
-<!--                                </h1>-->
-<!--                                <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Chào mừng đến với Coffee Shop - Nơi Tận Hưởng Cảm Xúc Mỗi Góc Nhìn!</span>-->
-<!--                                <br>-->
-<!--                                <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Quán cà phê của chúng tôi không chỉ là không gian, nó là một câu chuyện kể về hương vị và mùi thơm của những hạt cà phê tinh tế, là âm nhạc dịu dàng trải qua từng khoảnh khắc, và là sự chân thành trong mỗi ly cà phê mà chúng tôi phục vụ..</span>-->
-<!--                                <br>-->
-<!--                                <span style="color: #ffffff; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">-->
-<!--                            Hãy để chúng tôi, Coffee Shop, là điểm hẹn lý tưởng cho những buổi gặp gỡ, những cuộc trò chuyện và những khoảnh khắc thư giãn. Chúng tôi mong được phục vụ và làm hài lòng bạn, mỗi khi bạn đặt bàn tại đây.</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-<!--                    </div>-->
                 </div>
 
 
             </div>
-<!--            <div class="swiper-button-next"></div>-->
-<!--            <div class="swiper-button-prev"></div>-->
+            <!--            <div class="swiper-button-next"></div>-->
+            <!--            <div class="swiper-button-prev"></div>-->
             <div class="swiper-pagination" style="display: none"></div>
-            <div class="autoplay-progress"  style="display: none">
+            <div class="autoplay-progress" style="display: none">
                 <svg viewBox="0 0 48 48">
                     <circle cx="24" cy="24" r="20"></circle>
                 </svg>
@@ -271,33 +124,96 @@
 
 <!-- ***** About Area Starts ***** -->
 <section class="section" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-xs-12">
-                <div class="left-text-content">
-                    <div class="section-heading">
-                        <h1 style="color: #ffffff; text-align: left;"><strong><span
-                                style="color: #bf9369; font-family: 'times new roman', times, serif; font-size: 36pt;">About Us</span></strong>
-                        </h1>
-                        <span style="color: #bf9369; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">
-                            Chào mừng đến với Coffee Shop - Nơi Tận Hưởng Cảm Xúc Mỗi Góc Nhìn!</span>
-                        <br>
-                        <span style="color: #bf9369; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">
-                            Quán cà phê của chúng tôi không chỉ là không gian, nó là một câu chuyện kể về hương vị và mùi thơm của những hạt cà phê tinh tế, là âm nhạc dịu dàng trải qua từng khoảnh khắc, và là sự chân thành trong mỗi ly cà phê mà chúng tôi phục vụ..</span>
-                        <br>
-                        <span style="color: #bf9369; font-size: 14pt; letter-spacing: 2px; font-family: 'times new roman', times, serif;">
-                            Hãy để chúng tôi, Coffee Shop, là điểm hẹn lý tưởng cho những buổi gặp gỡ, những cuộc trò chuyện và những khoảnh khắc thư giãn. Chúng tôi mong được phục vụ và làm hài lòng bạn, mỗi khi bạn đặt bàn tại đây.</span>
+    <div class="vnt-container">
+        <div id="vnt-content">
+
+
+            <div class="about bg1">
+                <div class="img lazy-start fadeIn" data-eff="fadeIn" data-delay="0.3" style="animation-delay: 0.3s;"><a
+                        href="https://www.highlandscoffee.com.vn/vn/nguon-goc.html"><img
+                        src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-CAREER3.jpg" alt="NGUỒN GỐC"></a>
+                </div>
+                <div class="captionWrap">
+                    <div class="wrapper">
+                        <div class="caption">
+                            <div class="tend lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.3"
+                                 style="animation-delay: 0.3s;"><a
+                                    href="https://www.highlandscoffee.com.vn/vn/nguon-goc.html">NGUỒN GỐC</a></div>
+                            <div class="des lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.5"
+                                 style="animation-delay: 0.5s;"><p><span style="font-size:18px;">CÂU CHUYỆN NÀY LÀ CỦA CHÚNG MÌNH</span>
+                            </p>
+
+                                <p><span style="font-family:Roboto,sans-serif;"><span style="font-size:16px;"><span
+                                        style="line-height:115%"><span style="line-height:115%">Highlands Coffee® được thành lập vào năm 1999, bắt nguồn từ tình yêu dành cho đất Việt cùng với cà phê và cộng đồng nơi đây.&nbsp;</span></span></span></span><span
+                                        style="font-family:Roboto,sans-serif;"><span style="font-size:16px;">Ngay từ những ngày đầu tiên, mục tiêu của chúng mình là có thể phục vụ và góp phần phát triển cộng đồng bằng cách siết chặt thêm sự kết nối và sự gắn bó giữa người với người.</span></span>
+                                </p></div>
+                            <div class="link lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.7"
+                                 style="animation-delay: 0.7s;"><a
+                                    href="https://www.highlandscoffee.com.vn/vn/nguon-goc.html"><span>Xem chi tiết</span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-xs-12">
-                <div class="right-content">
-                    <div class="thumb">
-                        <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
-                        <img src="../template/custom/image/about/coffeeshop.jpeg" alt="">
+
+            <div class="about bg2">
+                <div class="img lazy-start fadeIn" data-eff="fadeIn" data-delay="0.3" style="animation-delay: 0.3s;"><a
+                        href="https://www.highlandscoffee.com.vn/vn/dich-vu.html"><img
+                        src="https://www.highlandscoffee.com.vn/vnt_upload/about/Highlands_4577_R3_-_Copy.jpg"
+                        alt="DỊCH VỤ"></a></div>
+                <div class="captionWrap">
+                    <div class="wrapper">
+                        <div class="caption">
+                            <div class="tend w lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.3"
+                                 style="animation-delay: 0.3s;"><a
+                                    href="https://www.highlandscoffee.com.vn/vn/dich-vu.html">DỊCH VỤ</a></div>
+                            <div class="des w lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.5"
+                                 style="animation-delay: 0.5s;"><p>DỊCH VỤ NÀY LÀ CỦA CHÚNG MÌNH</p>
+
+                                <p><span style="font-size:16px;"><span style="font-family:Roboto,sans-serif;"><span
+                                        style="line-height:115%"><span style="line-height:115%"><span
+                                        style="color:#4f2c1c">Highlands Coffee® là không gian của chúng mình nên mọi thứ ở đây đều vì sự thoải mái của chúng mình.&nbsp;</span></span></span><span
+                                        style="color:#4f2c1c">Đừng giữ trong lòng, hãy chia sẻ với chúng mình điều bạn mong muốn để cùng nhau giúp Highlands Coffee® trở nên tuyệt vời hơn. </span></span></span>
+                                </p></div>
+                            <div class="link w lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.7"
+                                 style="animation-delay: 0.7s;"><a
+                                    href="https://www.highlandscoffee.com.vn/vn/dich-vu.html"><span>Xem chi tiết</span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="about bg3">
+                <div class="img lazy-start fadeIn" data-eff="fadeIn" data-delay="0.3" style="animation-delay: 0.3s;"><a
+                        href="https://www.highlandscoffee.com.vn/vn/nghe-nghiep.html"><img
+                        src="https://www.highlandscoffee.com.vn/vnt_upload/about/Highlands_5557_R3_-_Copy.jpg"
+                        alt="NGHỀ NGHIỆP"></a></div>
+                <div class="captionWrap">
+                    <div class="wrapper">
+                        <div class="caption">
+                            <div class="tend w lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.3"
+                                 style="animation-delay: 0.3s;"><a
+                                    href="https://www.highlandscoffee.com.vn/vn/nghe-nghiep.html">NGHỀ NGHIỆP</a></div>
+                            <div class="des w lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.5"
+                                 style="animation-delay: 0.5s;"><p>CƠ HỘI NÀY LÀ CỦA CHÚNG MÌNH</p>
+
+                                <p><span style="font-family:Roboto,sans-serif;"><span style="font-size:16px;"><span
+                                        style="line-height:115%"><span style="line-height:115%"><span
+                                        style="color:#4f2c1c">Là điểm hội tụ của cộng đồng, Highlands Coffee® luôn tìm kiếm những thành viên mới với mong muốn không ngừng hoàn thiện một không gian dành cho tất cả mọi người.&nbsp;</span></span></span></span></span><span
+                                        style="font-family:Roboto,sans-serif;"><span style="font-size:16px;"><span
+                                        style="color:#4f2c1c">Chúng mình luôn chào đón bạn trở thành một phần của Highlands Coffee® để cùng nhau siết chặt thêm những kết nối và sự gắn bó giữa người với người.</span></span></span>
+                                </p></div>
+                            <div class="link w lazy-start fadeInUp" data-eff="fadeInUp" data-delay="0.7"
+                                 style="animation-delay: 0.7s;"><a
+                                    href="https://www.highlandscoffee.com.vn/vn/nghe-nghiep.html"><span>Xem chi tiết</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </section>
@@ -310,11 +226,12 @@
             <div class="col-lg">
                 <div class="section-heading ">
                     <h1>Bán chạy nhất</h1>
+
                 </div>
 
             </div>
         </div>
-        <div class="menu-item-carousel">
+        <div class="menu-item-carousel best_seller">
             <div class="col-lg-12">
                 <div class="owl-menu-item owl-carousel">
                     <div class="item">
@@ -367,8 +284,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Coffee Cream</p>
-                                <p class="text-muted mb-2">Coffee</p>
+                                <p class="fw-bold mb-2">Cà phê kem</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -377,42 +293,42 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
                                 </ul>
                                 <h5 class="mb-3">
-                                    <s class="text-muted me-2 small align-middle">20.000đ</s
-                                    ><span class="align-middle">35.000đ</span>
+                                    <s class="text-muted me-2 small align-middle">35.000đ</s
+                                    ><span class="align-middle">20.000đ</span>
                                 </h5>
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -467,8 +383,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Dalgona</p>
-                                <p class="text-muted mb-2">Coffee</p>
+                                <p class="fw-bold mb-2">Cà phê bọt biển</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -477,31 +392,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -511,7 +426,7 @@
                                 </h5>
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -569,8 +484,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Lemon Fruit</p>
-                                <p class="text-muted mb-2">Fruits</p>
+                                <p class="fw-bold mb-2">Nước chanh</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -579,31 +493,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -614,7 +528,7 @@
                                 </h5>
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -666,7 +580,6 @@
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
                                 <p class="fw-bold mb-2">Vodka</p>
-                                <p class="text-muted mb-2">Wine</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -675,31 +588,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -710,7 +623,7 @@
 
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -761,8 +674,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Strawbery</p>
-                                <p class="text-muted mb-2">Fruits</p>
+                                <p class="fw-bold mb-2">Sinh tố dâu</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -771,31 +683,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -806,7 +718,7 @@
 
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -828,7 +740,7 @@
                                     data-ripple-color="light"
                             >
                                 <img
-                                        src="../template/custom/image/menu/champagne.jpg"
+                                        src="../template/custom/image/menu/cream_vanila.jpg"
                                         class="w-100"
                                         alt=""
                                 />
@@ -857,8 +769,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Champagne</p>
-                                <p class="text-muted mb-2">Wine</p>
+                                <p class="fw-bold mb-2">Chocalate đá xay</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -867,31 +778,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -902,7 +813,7 @@
 
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -914,21 +825,20 @@
             </div>
         </div>
     </div>
-
     <div class="farm-cate-v3">
-      <div class="same-title white">
-        <h2 class="text_favorite text-white">
-            Sản phẩm yêu thích
-        </h2>
+        <div class="same-title white">
+            <h2 class="text_favorite text-white">
+                Danh mục yêu thích
+            </h2>
         </div>
-        <div class="container_menu">
+        <div class="container container_menu">
             <div class="row menu_contain_alpha">
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                <!-- Product card -->
-                <div>
-                    <!-- Product image -->
-                    <div
-                            class="
+                    <!-- Product card -->
+                    <div>
+                        <!-- Product image -->
+                        <div
+                                class="
                       bg-image ripple
                       shadow-4-soft
                       rounded-6
@@ -936,38 +846,38 @@
                       overflow-hidden
                       d-block content-farm
                       "
-                            data-ripple-color="light"
-                    >
-                        <img
+                                data-ripple-color="light"
+                        >
+                            <img
 
 
-                                src="../template/custom/image/home/fruit.jpg"
+                                    src="../template/custom/image/home/fruit.jpg"
 
 
-                                class="w-100"
-                                alt=""/>
-                        <div class="desc-farm">
-                            <div>
+                                    class="w-100"
+                                    alt=""/>
+                            <div class="desc-farm">
+                                <div>
                                 <span>
                                     TRÀ TRÁI CÂY
                                 </span>
-                                <a href="#">KHÁM PHÁ</a>
+                                    <a href="#">KHÁM PHÁ</a>
+                                </div>
                             </div>
+
+
                         </div>
 
-
                     </div>
+                    <!-- Product card -->
 
                 </div>
-                <!-- Product card -->
-
-            </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                <!-- Product card -->
-                <div>
-                    <!-- Product image -->
-                    <div
-                            class="
+                    <!-- Product card -->
+                    <div>
+                        <!-- Product image -->
+                        <div
+                                class="
                       bg-image ripple
                       shadow-4-soft
                       rounded-6
@@ -975,37 +885,37 @@
                       overflow-hidden
                       d-block content-farm
                       "
-                            data-ripple-color="light"
-                    >
-                        <img
+                                data-ripple-color="light"
+                        >
+                            <img
 
 
-                                src="../template/custom/image/home/wine.jpg"
+                                    src="../template/custom/image/home/wine.jpg"
 
 
-                                class="w-100"
-                                alt=""/>
-                        <div class="desc-farm">
-                            <div>
+                                    class="w-100"
+                                    alt=""/>
+                            <div class="desc-farm">
+                                <div>
                                 <span>
                                     RƯỢU
                                 </span>
-                                <a href="#">KHÁM PHÁ</a>
+                                    <a href="#">KHÁM PHÁ</a>
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
+                    <!-- Product card -->
 
                 </div>
-                <!-- Product card -->
-
-            </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                <!-- Product card -->
-                <div>
-                    <!-- Product image -->
-                    <div
-                            class="
+                    <!-- Product card -->
+                    <div>
+                        <!-- Product image -->
+                        <div
+                                class="
                       bg-image ripple
                       shadow-4-soft
                       rounded-6
@@ -1013,37 +923,37 @@
                       overflow-hidden
                       d-block content-farm
                       "
-                            data-ripple-color="light"
-                    >
-                        <img
+                                data-ripple-color="light"
+                        >
+                            <img
 
 
-                                src="../template/custom/image/home/coffee.jpg"
+                                    src="../template/custom/image/home/coffee.jpg"
 
 
-                                class="w-100"
-                                alt=""/>
-                        <div class="desc-farm">
-                            <div>
+                                    class="w-100"
+                                    alt=""/>
+                            <div class="desc-farm">
+                                <div>
                                 <span>
                                     CÀ PHÊ
                                 </span>
-                                <a href="#">KHÁM PHÁ</a>
+                                    <a href="#">KHÁM PHÁ</a>
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
+                    <!-- Product card -->
 
                 </div>
-                <!-- Product card -->
-
-            </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                <!-- Product card -->
-                <div>
-                    <!-- Product image -->
-                    <div
-                            class="
+                    <!-- Product card -->
+                    <div>
+                        <!-- Product image -->
+                        <div
+                                class="
                       bg-image ripple
                       shadow-4-soft
                       rounded-6
@@ -1051,31 +961,31 @@
                       overflow-hidden
                       d-block content-farm
                       "
-                            data-ripple-color="light"
-                    >
-                        <img
+                                data-ripple-color="light"
+                        >
+                            <img
 
 
-                                src="../template/custom/image/home/cookie.jpg"
+                                    src="../template/custom/image/home/cookie.jpg"
 
 
-                                class="w-100"
-                                alt=""/>
-                        <div class="desc-farm">
-                            <div>
+                                    class="w-100"
+                                    alt=""/>
+                            <div class="desc-farm">
+                                <div>
                                 <span>
                                     BÁNH NGỌT
                                 </span>
-                                <a href="#">KHÁM PHÁ</a>
+                                    <a href="#">KHÁM PHÁ</a>
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
+                    <!-- Product card -->
 
                 </div>
-                <!-- Product card -->
-
-            </div>
             </div>
         </div>
     </div>
@@ -1126,9 +1036,11 @@
                             p-3
                             "
                                         >
+
                 <span class="badge badge-success rounded-pill me-2"
                 >New</span
                 >
+
                                         </div>
                                     </div>
                                     <div class="hover-overlay">
@@ -1142,8 +1054,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Coffee Cream</p>
-                                <p class="text-muted mb-2">Coffee</p>
+                                <p class="fw-bold mb-2">Cà phê kem</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -1152,42 +1063,42 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
                                 </ul>
                                 <h5 class="mb-3">
-                                    <s class="text-muted me-2 small align-middle">20.000đ</s
-                                    ><span class="align-middle">35.000đ</span>
+                                    <s class="text-muted me-2 small align-middle">35.000đ</s
+                                    ><span class="align-middle">20.000đ</span>
                                 </h5>
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -1225,9 +1136,11 @@
                             p-3
                             "
                                         >
+
                   <span class="badge badge-success rounded-pill me-2"
                   >New</span
                   >
+
 
                                         </div>
                                     </div>
@@ -1242,8 +1155,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Dalgona</p>
-                                <p class="text-muted mb-2">Coffee</p>
+                                <p class="fw-bold mb-2">Cà phê bọt biển</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -1252,31 +1164,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -1286,7 +1198,7 @@
                                 </h5>
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -1328,8 +1240,10 @@
                             p-3
                             "
                                         >
+
                   <span class="badge badge-success rounded-pill me-2"
                   >New</span
+
                   >
                                         </div>
                                     </div>
@@ -1344,8 +1258,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Lemon Fruit</p>
-                                <p class="text-muted mb-2">Fruits</p>
+                                <p class="fw-bold mb-2">Nước chanh</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -1354,31 +1267,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -1389,7 +1302,7 @@
                                 </h5>
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -1411,7 +1324,7 @@
                                     data-ripple-color="light"
                             >
                                 <img
-                                        src="../template/custom/image/menu/vodka.jpg"
+                                        src="../template/custom/image/menu/cookie_cream.jpg"
                                         class="w-100"
                                         alt=""
                                 />
@@ -1425,11 +1338,13 @@
                             h-100
                             p-3
                             "
+
                                         >
                                             <span class="badge badge-success rounded-pill me-2"
                                             >New</span
                                             >
                                         </div>
+
                                     </div>
                                     <div class="hover-overlay">
                                         <div
@@ -1442,8 +1357,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Vodka</p>
-                                <p class="text-muted mb-2">Wine</p>
+                                <p class="fw-bold mb-2">Sinh tố bánh quy</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -1452,31 +1366,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -1487,7 +1401,7 @@
 
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -1523,11 +1437,13 @@
                             h-100
                             p-3
                             "
+
                                         >
                                             <span class="badge badge-success rounded-pill me-2"
                                             >New</span
                                             >
                                         </div>
+
                                     </div>
                                     <div class="hover-overlay">
                                         <div
@@ -1540,8 +1456,7 @@
 
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Strawbery</p>
-                                <p class="text-muted mb-2">Fruits</p>
+                                <p class="fw-bold mb-2">Sinh tố dâu</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -1550,31 +1465,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -1585,7 +1500,7 @@
 
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
@@ -1607,7 +1522,7 @@
                                     data-ripple-color="light"
                             >
                                 <img
-                                        src="../template/custom/image/menu/champagne.jpg"
+                                        src="../template/custom/image/menu/cream_vanila.jpg"
                                         class="w-100"
                                         alt=""
                                 />
@@ -1621,10 +1536,12 @@
                             h-100
                             p-3
                             "
+
                                         >
                                             <span class="badge badge-success rounded-pill me-2"
                                             >New</span
                                             >
+
                                         </div>
                                     </div>
                                     <div class="hover-overlay">
@@ -1636,10 +1553,10 @@
                                 </a>
                             </div>
 
+
                             <!-- Product content -->
                             <div class="px-3 text-reset d-block">
-                                <p class="fw-bold mb-2">Champagne</p>
-                                <p class="text-muted mb-2">Wine</p>
+                                <p class="fw-bold mb-2">Chocalate đá xay</p>
                                 <ul
                                         class="rating mb-2"
                                         data-mdb-toggle="rating"
@@ -1648,31 +1565,31 @@
                                 >
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary ps-0"
+                                                class="far fa-star fa-sm color_far ps-0"
                                                 title="Bad"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Poor"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="OK"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Good"
                                         ></i>
                                     </li>
                                     <li>
                                         <i
-                                                class="far fa-star fa-sm text-primary"
+                                                class="far fa-star fa-sm color_far"
                                                 title="Excellent"
                                         ></i>
                                     </li>
@@ -1683,10 +1600,11 @@
 
                                 <button
                                         type="button"
-                                        class="btn btn-primary btn-rounded w-100"
+                                        class="btn btn-primary btn-rounded w-100 color_btn"
                                 >
                                     <i class="fas fa-cart-plus me-2"></i>Thêm vào bàn
                                 </button>
+
                             </div>
                             <!-- Product content -->
                         </div>
@@ -1694,187 +1612,291 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 </section>
 <!-- ***** Menu Area Ends ***** -->
 
+<section class="section mb-5" id="new">
+    <div class="same-title">
+        <i>Có gì mới</i>
+        <h2>Bài viết mới</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-6 articelItem">
+                <div class="stArticleLoop">
+                    <div class="box-latest-news">
+                        <a href="" class="thumb-img">
+                            <div class="mask-plus">
+                                <div class="shape"></div>
+                            </div>
+                            <img src="../template/custom/image/home/new/2.jpg" alt="">
+                        </a>
+                        <div class="content-ln">
+                            <span>07/09/2023</span>
+                            <a href="">
+                                <h3>Trung thu tết đoàn viên</h3>
+                            </a>
+                            <a href="">
+                                "Xem thêm "
+                                <i class="fa fa-long-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-6 articelItem">
+                <div class="stArticleLoop">
+                    <div class="box-latest-news">
+                        <a href="" class="thumb-img">
+                            <div class="mask-plus">
+                                <div class="shape"></div>
+                            </div>
+                            <img src="../template/custom/image/home/new/1.jpg" alt="">
+                        </a>
+                        <div class="content-ln">
+                            <span>07/09/2023</span>
+                            <a href="">
+                                <h3>Trung thu tết đoàn viên</h3>
+                            </a>
+                            <a href="">
+                                "Xem thêm "
+                                <i class="fa fa-long-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-6 articelItem">
+                <div class="stArticleLoop">
+                    <div class="box-latest-news">
+                        <a href="" class="thumb-img">
+                            <div class="mask-plus">
+                                <div class="shape"></div>
+                            </div>
+                            <img src="../template/custom/image/home/new/3.jpg" alt="">
+                        </a>
+                        <div class="content-ln">
+                            <span>07/09/2023</span>
+                            <a href="">
+                                <h3>Trung thu tết đoàn viên</h3>
+                            </a>
+                            <a href="">
+                                "Xem thêm "
+                                <i class="fa fa-long-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section" id="contact_Us">
+    <div class="hidden-sn white-skin animated">
+        <div class="container my-5">
 
 
+            <!--Section: Content-->
+            <section class="contact-section dark-grey-text mb-5">
+
+                <style>
+                    .contact-section .form .btn-floating {
+                        left: 3px;
+                    }
+                </style>
+
+                <!-- Form with header -->
+                <div class="card">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-lg-7">
+                            <form>
+                                <div class="card-body form">
+
+                                    <!-- Header -->
+                                    <h3 class="font-weight-bold dark-grey-text" style="font-size: 15px"><i
+                                            class="fa-solid fa-envelope fa-xl pr-2 mr-1"></i>Gửi phản ánh cho chúng tôi:
+                                    </h3>
+
+                                    <!-- Grid row -->
+                                    <div class="row mt-3">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-6">
+                                            <div class="wrap-input100 validate-input"
+                                                 data-validate="Cần nhập tên đăng nhập">
+                                                <input class="input100" type="text" name="name">
+                                                <span class="focus-input100"></span>
+                                                <span class="label-input100">Họ và Tên</span>
+                                            </div>
+
+                                        </div>
+                                        <!-- Grid column -->
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-6">
+                                            <div class="wrap-input100 validate-input"
+                                                 data-validate="Cần nhập tên đăng nhập">
+                                                <input class="input100" type="text" name="email">
+                                                <span class="focus-input100"></span>
+                                                <span class="label-input100">Email</span>
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                    </div>
+                                    <!-- Grid row -->
+
+                                    <!-- Grid row -->
+                                    <div class="row">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-6">
+                                            <div class="wrap-input100 validate-input"
+                                                 data-validate="Cần nhập tên đăng nhập">
+                                                <input class="input100" type="text" name="name">
+                                                <span class="focus-input100"></span>
+                                                <span class="label-input100">Số điện thoại</span>
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-6">
+                                            <div class="wrap-input100 validate-input"
+                                                 data-validate="Cần nhập tên đăng nhập">
+                                                <input class="input100" type="text" name="name">
+                                                <span class="focus-input100"></span>
+                                                <span class="label-input100">Chủ đề</span>
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                    </div>
+                                    <!-- Grid row -->
+
+                                    <!-- Grid row -->
+                                    <div class="row">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <div class="text-input100 validate-input"
+                                                     data-validate="Cần nhập tên đăng nhập">
+                                                    <textarea class="input100 mt-2" type="text"
+                                                              name="textarea"> </textarea>
+                                                    <span class="focus-input100"></span>
+                                                    <span class="label-input100">Nội dung góp ý</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Grid column -->
+
+                                    </div>
+                                    <div class="col-md-12 d-flex justify-content-end  pr-5 ">
+                                        <button type="submit" class="send bg-info p-4 rounded-circle">
+                                            <i class="fa-sharp fa-regular fa-paper-plane fa-2xl "></i>
+                                        </button>
+                                    </div>
+                                    <!-- Grid row -->
+
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-lg-5 ">
+
+                            <div class="card-body contact text-center h-100 ">
+
+                                <h3 class="font-weight-bold my-4 pb-2">Thông Tin Liên Hệ</h3>
+                                <ul class="text-lg-left">
+                                    <li class="d-flex justify-content-center">
+                                        <p><i class="fas fa-map-marker-alt pr-2"></i>Trường Đại học Nông Lâm Tp.Hồ Chí
+                                            Minh
+                                        </p>
+                                    </li>
+                                    <li class="d-flex justify-content-center">
+                                        <p><i class="fas fa-phone pr-2"></i>0394707535</p>
+                                    </li>
+                                    <li class="d-flex justify-content-center">
+                                        <p><i class="fas fa-envelope pr-2"></i>coffeshop@gmail.com</p>
+                                    </li>
+                                </ul>
+                                <hr class="hr-light my-4">
+                                <ul class="list-inline text-center list-unstyled">
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg li-ic">
+                                            <i class="fa-brands fa-twitter fa-xl"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg li-ic">
+                                            <i class="fa-brands fa-facebook fa-xl"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg ins-ic">
+                                            <i class="fa-brands fa-instagram fa-xl"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Form with header -->
+
+            </section>
+            <!--Section: Content-->
+
+
+        </div>
+    </div>
+</div>
 
 <!-- ***** Footer Start ***** -->
-<footer class="text-white text-center text-lg-start" style="background-color: #4e342e;">
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row mt-4">
-            <!--Grid column-->
-            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">About company</h5>
-
-                <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                    voluptatum deleniti atque corrupti.
-                </p>
-
-                <p>
-                    Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-                    molestias.
-                </p>
-
-                <div class="mt-4">
-                    <!-- Facebook -->
-                    <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-facebook-f"></i></a>
-                    <!-- Dribbble -->
-                    <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-dribbble"></i></a>
-                    <!-- Twitter -->
-                    <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-twitter"></i></a>
-                    <!-- Google + -->
-                    <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-google-plus-g"></i></a>
-                    <!-- Linkedin -->
-                </div>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4 pb-1">Search something</h5>
-
-                <div class="form-outline form-white mb-4">
-                    <input type="text" id="formControlLg" class="form-control form-control-lg"/>
-                    <label class="form-label" for="formControlLg">Search</label>
-                </div>
-
-                <ul class="fa-ul" style="margin-left: 1.65em;">
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-home"></i></span><span
-                            class="ms-2">New York, NY 10012, US</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-envelope"></i></span><span
-                            class="ms-2">info@example.com</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234 567 88</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+ 01 234 567 89</span>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Opening hours</h5>
-
-                <table class="table text-center text-white">
-                    <tbody class="font-weight-normal">
-                    <tr>
-                        <td>Mon - Thu:</td>
-                        <td>8am - 9pm</td>
-                    </tr>
-                    <tr>
-                        <td>Fri - Sat:</td>
-                        <td>8am - 1am</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday:</td>
-                        <td>9am - 10pm</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!--Grid column-->
-        </div>
-        <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-</footer>
+<%@ include file="layout/footer.jsp" %>
+<!-- ***** Footer End ***** -->
 
 <!-- jQuery -->
-<script src="../template/assets/js/jquery-2.1.0.min.js"></script>
-
+<script src="<c:url value="/views/template/assets/js/jquery-2.1.0.min.js"/> "></script>
+<!---->
 <!-- Bootstrap -->
-<script src="../template/assets/js/popper.js"></script>
-<script src="../template/assets/js/bootstrap.min.js"></script>
+<script src="<c:url value="/views/template/assets/js/popper.js"/> "></script>
+<script src="<c:url value="/views/template/assets/js/bootstrap.min.js"/> "></script>
 
 <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="<c:url value="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"/> "></script>
 
-<!-- Initialize Swiper -->
-<script>
-    const progressCircle = document.querySelector(".autoplay-progress svg");
-    const progressContent = document.querySelector(".autoplay-progress span");
-    var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        on: {
-            autoplayTimeLeft(s, time, progress) {
-                progressCircle.style.setProperty("--progress", 1 - progress);
-                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-            }
-        }
-    });
-</script>
 
 <!-- Plugins -->
-<script src="../template/assets/js/owl-carousel.js"></script>
-<script src="../template/assets/js/accordions.js"></script>
-<script src="../template/assets/js/datepicker.js"></script>
-<script src="../template/assets/js/scrollreveal.min.js"></script>
-<script src="../template/assets/js/waypoints.min.js"></script>
-<script src="../template/assets/js/jquery.counterup.min.js"></script>
-<script src="../template/assets/js/imgfix.min.js"></script>
-<script src="../template/assets/js/slick.js"></script>
-<script src="../template/assets/js/lightbox.js"></script>
-<script src="../template/assets/js/isotope.js"></script>
+<script src="<c:url value="/views/template/assets/js/owl-carousel.js"/> "></script>
+<script src="<c:url value="/views/template/assets/js/datepicker.js"/> "></script>
+<script src="<c:url value="/views/template/assets/js/slick.js"/> "></script>
+<script src="<c:url value="/views/template/assets/js/isotope.js"/> "></script>
 
 <!-- Global Init -->
-<script src="../template/assets/js/custom.js"></script>
-<script>
-
-    $(function () {
-        var selectedClass = "";
-        $("p").click(function () {
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-            $("#portfolio div").not("." + selectedClass).fadeOut();
-            setTimeout(function () {
-                $("." + selectedClxass).fadeIn();
-                $("#portfolio").fadeTo(50, 1);
-            }, 500);
-
-        });
-    });
-
-    <script src="../template/custom/js/home.js"></script>
-
-</script>
-<script src="../template/assets/js/jquery-2.1.0.min.js"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>-->
-<script src="../template/assets/js/popper.js"></script>
-<script src="../template/assets/js/bootstrap.min.js"></script>
-
-
+<script src="<c:url value="/views/template/assets/js/custom.js"/> "></script>
 <script>
     const progressCircle = document.querySelector(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");
@@ -1901,8 +1923,10 @@
         }
     });
 </script>
-<script type="text/javascript" src="../template/mdb/js/mdb.min.js"></script>
-<script type="text/javascript" src="../template/mdb/plugins/js/all.min.js"></script>
+
+<script src="<c:url value="/views/template/assets/js/jquery-2.1.0.min.js"/> "></script>
+<script type="text/javascript" src="<c:url value="/views/template/mdb/js/mdb.min.js"/> "></script>
+<script type="text/javascript" src="<c:url value="/views/template/mdb/plugins/js/all.min.js"/> "></script>
 
 </body>
 </html>
