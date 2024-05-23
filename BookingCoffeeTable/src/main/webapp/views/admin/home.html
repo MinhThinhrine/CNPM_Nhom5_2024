@@ -1,7 +1,9 @@
+
 <!--<%@include file="/common/taglib.jsp" %>-->
 <!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8"/>
@@ -16,30 +18,29 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     />
-<!--    &lt;!&ndash; MDB ESSENTIAL &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="<c:url value="/views/template/mdb/css/mdb.min.css"/> ">-->
-<!--    &lt;!&ndash; MDB PLUGINS &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="<c:url value="/views/template/mdb/plugins/css/all.min.css"/> ">-->
-<!--    &lt;!&ndash; Custom styles &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="<c:url value="/views/admin/assets/css/home.css"/> ">    -->
+
     <!-- MDB ESSENTIAL -->
-    <link rel="stylesheet" href="../template/mdb/css/mdb.min.css">
+    <link rel="stylesheet" href="../template/mdb/css/mdb.min.css"/>
     <!-- MDB PLUGINS -->
-    <link rel="stylesheet" href="../template/mdb/plugins/css/all.min.css">
+    <link rel="stylesheet" href="../template/mdb/plugins/css/all.min.css"/>
     <!-- Custom styles -->
-    <link rel="stylesheet" href="../admin/assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/home.css"/>
+
     <style></style>
 </head>
 
 <body>
 <!-- Start your project here-->
 <!--Main Navigation-->
-<!-- ***** Header Area Start ***** -->
+
+
 <header>
     <!-- Sidenav -->
     <nav id="main-sidenav" class="sidenav sidenav-sm shadow-1" data-mdb-mode="side"
          data-mdb-hidden="false">
+
         <a class="ripple d-flex justify-content-center pt-4 pb-2" href="/admin/dashboard" data-mdb-ripple-color="primary">
+
             <img id="MDB-logo" src="../template/custom/image/drink/logo2.png" style="width: 60px"
                  alt="MDB Logo" draggable="false"/>
         </a>
@@ -48,7 +49,9 @@
 
         <ul class="sidenav-menu px-2 pb-5">
             <li class="sidenav-item">
+
                 <a class="sidenav-link text-primary" href="/admin/dashboard">
+
                     <i class="fas fa-tachometer-alt fa-fw me-3 "></i><span>Trang chủ</span></a>
             </li>
             <li class="sidenav-item pt-3">
@@ -59,10 +62,24 @@
                     <i class="fas fa-users fa-fw me-3 "></i><span>Quản lý người dùng</span></a>
                 <ul class="sidenav-collapse">
                     <li class="sidenav-item">
-                        <a class="sidenav-link" href="/admin/user-management/edit">Thêm người dùng</a>
+
+                        <a class="sidenav-link" href="userAddition.html">Thêm người dùng</a>
                     </li>
                     <li class="sidenav-item">
-                        <a class="sidenav-link" href="/admin/user-management">Danh sách người dùng</a>
+                        <a class="sidenav-link" href="userManagement.html">Danh sách người dùng</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link ">
+                    <i class="fas fa-users fa-fw me-3 "></i><span>Quản lý vai trò</span></a>
+                <ul class="sidenav-collapse">
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="roleAddition.html">Thêm vai trò</a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a class="sidenav-link" href="roleManagement.html">Danh sách vai trò</a>
+
                     </li>
                 </ul>
             </li>
@@ -71,6 +88,7 @@
                     <i class="fas fa-mug-saucer fa-fw me-3"></i><span>Quản lý món</span></a>
                 <ul class="sidenav-collapse ">
                     <li class="sidenav-item">
+
                         <a class="sidenav-link" href="/admin/product-management/edit">Thêm món</a>
                     </li>
                     <li class="sidenav-item">
@@ -78,6 +96,7 @@
                     </li>
                     <li class="sidenav-item">
                         <a class="sidenav-link" href="/admin/product-management/review">Danh sách đánh giá</a>
+
                     </li>
                 </ul>
             </li>
@@ -86,10 +105,12 @@
                     <i class="fas fa-bars fa-fw me-3 "></i><span>Quản lý danh mục</span></a>
                 <ul class="sidenav-collapse ">
                     <li class="sidenav-item">
+
                         <a class="sidenav-link" href="/admin/category-management/edit">Thêm danh mục</a>
                     </li>
                     <li class="sidenav-item">
                         <a class="sidenav-link" href="/admin/category-management">Danh sách danh mục</a>
+
                     </li>
                 </ul>
             </li>
@@ -98,10 +119,12 @@
                     <i class="fas fa-table fa-fw me-3 "></i><span>Quản lý bàn</span></a>
                 <ul class="sidenav-collapse ">
                     <li class="sidenav-item">
+
                         <a class="sidenav-link" href="/admin/table-management/edit">Thêm bàn</a>
                     </li>
                     <li class="sidenav-item">
                         <a class="sidenav-link" href="/admin/table-management">Danh sách bàn</a>
+
                     </li>
                 </ul>
             </li>
@@ -110,7 +133,9 @@
                     <i class="fas fa-clipboard-list fa-fw me-3 "></i><span>Quản lý đơn đặt bàn</span></a>
                 <ul class="sidenav-collapse ">
                     <li class="sidenav-item">
+
                         <a class="sidenav-link" href="/admin/reservation-management">Danh sách đơn đặt bàn</a>
+
                     </li>
                 </ul>
             </li>
@@ -119,7 +144,9 @@
                     <i class="fas fa-message fa-fw me-3 "></i><span>Quản lý trang liên hệ</span></a>
                 <ul class="sidenav-collapse ">
                     <li class="sidenav-item">
+
                         <a class="sidenav-link" href="/admin/contact-management">Danh sách liên hệ</a>
+
                     </li>
                 </ul>
             </li>
@@ -128,10 +155,12 @@
                     <i class="fas fa-blog fa-fw me-3 "></i><span>Quản lý trang tin tức</span></a>
                 <ul class="sidenav-collapse ">
                     <li class="sidenav-item">
+
                         <a class="sidenav-link" href="/admin/post-management/edit">Thêm bài viết</a>
                     </li>
                     <li class="sidenav-item">
                         <a class="sidenav-link" href="/admin/post-management">Danh sách bài viết</a>
+
                     </li>
                 </ul>
             </li>
@@ -167,8 +196,10 @@
                              loading="lazy"/>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+
                         <li><a class="dropdown-item " href="/profile">My profile</a></li>
                         <li><a class="dropdown-item" href="/logout">Logout</a></li>
+
                     </ul>
                 </li>
             </ul>
@@ -204,9 +235,7 @@
                                 Export<i class="fas fa-download ms-2"></i>
                             </button>
 
-                        </div>
 
-                    </div>
                 </div>
             </div>
         </div>
@@ -214,7 +243,8 @@
     <!-- Heading -->
 
 </header>
-<!-- ***** Header Area End ***** -->
+
+
 <!--Main Navigation-->
 
 <!--Main layout-->
@@ -233,7 +263,9 @@
                                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                         Tổng đơn đặt bàn
                                     </div>
+
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">${reservationCount}</div>
+
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -254,7 +286,9 @@
                                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         Doanh thu
                                     </div>
+
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">${cost}đ</div>
+
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -274,7 +308,9 @@
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1"> Tổng số
                                         khách hàng
                                     </div>
+
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">${seatCount}</div>
+
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-user-group fa-2x text-gray-300"></i>
@@ -294,7 +330,9 @@
                                     <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                         Tổng sản phẩm
                                     </div>
+
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">${totalProduct}</div>
+
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-mug-saucer fa-2x text-gray-300"></i>
@@ -313,6 +351,7 @@
                     <strong>Thống kê chi tiết</strong>
                 </div>
                 <div class="card-body">
+
                     <div class="input-group mb-4 ">
                         <input type="text" class="form-control" id="advanced-search-input"
                                placeholder=""/>
@@ -320,18 +359,23 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
+
                     <div class="table-responsive datatable">
                         <table class="table table-hover table-borderless table-striped text-nowrap">
                             <thead>
                             <tr>
-                                <th scope="col">Tên người dùng</th>
+
+                                <th scope="col">Tên khách hàng</th>
                                 <th scope="col">Số điện thoại</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Đơn đã đặt</th>
+                                <th scope="col">Số sản phẩm</th>
+
                                 <th scope="col">Số tiền</th>
                             </tr>
                             </thead>
                             <tbody>
+
                             <c:forEach items="${statisticals}" var="statistical">
                                 <tr>
                                     <th scope="row"></th>
@@ -342,6 +386,7 @@
                                     <td>${statistical.totalCost}đ</td>
                                 </tr>
                             </c:forEach>
+
                             </tbody>
                         </table>
                     </div>
@@ -357,13 +402,18 @@
 </main>
 <!--Main layout-->
 
+
+
 <!-- End your project here-->
 </body>
 
 <!-- MDB ESSENTIAL -->
-<!--<script src="<c:url value="/views/template/assets/js/jquery-2.1.0.min.js"/> "></script>-->
-<!--<script type="text/javascript" src="<c:url value="/views/template/mdb/js/mdb.min.js"/> "></script>-->
-<!--<script type="text/javascript" src="<c:url value="/views/template/mdb/plugins/js/all.min.js"/> "></script>-->
-<!--&lt;!&ndash; Custom scripts &ndash;&gt;-->
-<!--<script type="text/javascript" src="<c:url value="/views/admin/assets/js/home.js"/> "></script>-->
+
+<script type="text/javascript" src="../template/mdb/js/mdb.min.js"></script>
+<!-- MDB PLUGINS -->
+<script type="text/javascript" src="../template/mdb/plugins/js/all.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript" src="assets/js/home.js"></script>
+<script type="text/javascript"></script>
+
 </html>
