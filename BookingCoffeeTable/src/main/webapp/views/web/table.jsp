@@ -205,47 +205,51 @@
     });
 
 
+    function checkTime(startTime, endTime, currentDateTimePlus15Minutes) {
+        var parsedStartTime = new Date(startTime);
+        var parsedEndTime = new Date(endTime);
+
+        if (parsedStartTime > currentDateTimePlus15Minutes) {
+            if (parsedEndTime > parsedStartTime) {
+                return true;
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Thời gian kết thúc phải lớn hơn thời gian bắt đầu 15 phút!",
+                });
+            }
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Thời gian bắt đầu phải lớn hơn thời gian hiện tại 15 phút!",
+            });
+        }
+        return false;
+    }
+
     $('#find').click(function () {
-        count = 0;
         var currentDate = new Date();
         var currentDateTimePlus15Minutes = new Date();
         currentDateTimePlus15Minutes.setMinutes(currentDateTimePlus15Minutes.getMinutes() + 15);
 
         if ($('#filterDate').val()) {
-            startTime = $('#filterDate').val() + " " + $('#filterStartTime').val() + ":00";
-            endTime = $('#filterDate').val() + " " + $('#filterEndTime').val() + ":00";
+            var startTime = $('#filterDate').val() + " " + $('#filterStartTime').val() + ":00";
+            var endTime = $('#filterDate').val() + " " + $('#filterEndTime').val() + ":00";
+            var count = $('#filterPeople').val();
 
-            var parsedStartTime = new Date(startTime);
-            var parsedEndTime = new Date(endTime);
-            count = $('#filterPeople').val();
-            // Kiểm tra điều kiện
-
-            if (parsedStartTime > currentDateTimePlus15Minutes) {
-                if (parsedEndTime > parsedStartTime) {
-                    ajaxRun(count, text, startTime, endTime, areaValue);
-                } else Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Thời gian kết thúc phải lớn hơn thời gian bắt đầu 15 phút!",
-                });
-
-
-            } else
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Thời gian bắt đầu phải lớn hơn thời gian hiện tại 15 phút!",
-                });
-            ;
-
-
+            if (checkTime(startTime, endTime, currentDateTimePlus15Minutes)) {
+                var text = ""; // You should define what text is based on your context
+                var areaValue = 0; // You should define what areaValue is based on your context
+                ajaxRun(count, text, startTime, endTime, areaValue);
+            }
         } else {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
                 text: "Vui lòng chọn ngày đặt bàn!",
             });
-
         }
     });
 

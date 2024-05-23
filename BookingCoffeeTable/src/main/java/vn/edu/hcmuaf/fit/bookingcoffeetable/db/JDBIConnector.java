@@ -3,7 +3,6 @@ package vn.edu.hcmuaf.fit.bookingcoffeetable.db;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import org.jdbi.v3.core.Jdbi;
 import vn.edu.hcmuaf.fit.bookingcoffeetable.bean.User;
-import vn.edu.hcmuaf.fit.bookingcoffeetable.dao.CategoryDAO;
 
 import java.sql.SQLException;
 import java.util.List;
