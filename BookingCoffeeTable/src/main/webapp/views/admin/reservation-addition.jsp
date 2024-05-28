@@ -47,6 +47,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="mb-3">
+
+<%--                        Nhập các thông tin cần thiết để thêm đơn đặt bàn--%>
+
                         <label for="username" class="form-label"><b>Tên liên hệ</b></label>
                         <i class="fas fa-user"></i>
                         <input type="text" class="form-control" id="username" name="username" value="${reservation.contactName}"
@@ -85,6 +88,9 @@
                     <i class="fas fa-user-tag"></i>
                     <select class="form-select" id="tableNum" name="tableNum" required>
                         <option value="" disabled>--Chọn bàn--</option>
+
+<%--                        Lấy danh sách bàn từ db và hiển thị ra để chọn--%>
+
                         <c:forEach items="${tables}" var="table">
                             <c:choose>
                                 <c:when test="${table.id == reservation.tableId}">
