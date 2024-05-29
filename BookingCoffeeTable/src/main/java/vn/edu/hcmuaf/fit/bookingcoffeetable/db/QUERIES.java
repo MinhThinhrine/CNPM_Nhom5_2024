@@ -153,7 +153,6 @@ public class QUERIES {
                 "SELECT DISTINCT t.* FROM tables t " +
                         "LEFT JOIN reservations r ON t.id = r.tableId " +
                         "WHERE " +
-                        "(areaId IS NULL OR areaId = :areaId OR :areaId IS NULL) AND " +
                         "(r.id IS NULL OR r.endTime <= CURRENT_DATE) AND " +
                         "NOT EXISTS (" +
                         "SELECT 1 FROM reservations r2 " +
@@ -161,10 +160,9 @@ public class QUERIES {
                         "(r2.startTime <= :endTime AND r2.endTime >= :startTime)" +
                         ") AND " +
                         "(r.id IS NULL OR (r.endTime <= :startTime OR r.startTime >= :endTime)) " +
-                        "AND t.seatCount >= :count AND " +
-                        "LOWER(t.location) LIKE LOWER(CONCAT('%', :find, '%')) " +
-                        "ORDER BY t.tableNum " +
-                        "LIMIT :limit OFFSET :offset";
+                        "AND t.seatCount >= :count " +
+                        "ORDER BY t.tableNum ";
+
 
         public static final String COUNT_TABLE = "SELECT count(*) FROM tables";
         public static final String SELECT_TABLE_BY_ID = "SELECT * FROM tables WHERE id = :id";
