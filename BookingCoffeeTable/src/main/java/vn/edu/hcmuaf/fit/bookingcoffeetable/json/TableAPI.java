@@ -28,10 +28,9 @@ public class TableAPI extends HttpServlet {
     int pageIndexNum = 1;
     int perPageNum = 9;
 
-    int countNum = 0;
+    int count = 0;
 
-    int areaValue = 0;
-    String area = null;
+
 
     PageRequest pageRequest = null;
 
@@ -43,33 +42,25 @@ public class TableAPI extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
         response.setCharacterEncoding("utf-8");
-
-        // Receive request page-index and per-page
-        String pageIndex = request.getParameter("page-index");
-        String perPage = request.getParameter("per-page");
-        String count = request.getParameter("count");
-        String find = request.getParameter("text");
+        String countNum = request.getParameter("count");
         String startTime = request.getParameter("startTime");
         String endTime = request.getParameter("endTime");
-        area = request.getParameter("areaValue");
 
         try {
-            pageIndexNum = Integer.parseInt(pageIndex);
-            perPageNum = Integer.parseInt(perPage);
-            if (area.equals("0")) {
-                area = null;
-            }
-            if (count != null && !count.equals("")) {
-                countNum = Integer.parseInt(count);
+
+            if (countNum != null && !countNum.equals("")) {
+                count = Integer.parseInt(countNum);
             }
 
-            pageRequest = new PageRequest(pageIndexNum, perPageNum);
+
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
         System.out.println(startTime + " " + endTime);
-        // Fetch tables directly without using a separate thread
-        tables = tableService.getTables(area, startTime, endTime, countNum, find, pageRequest.getLimit(), pageRequest.getOffset());
+
+        // findTable(startTime, endTime, count)
+        // Lấy danh sách tables từ TableService qua phương thức getTables(startTime, endTime, count)
+        tables = tableService.getTables(startTime, endTime, count);
 
         if (tables != null) {
             json = new Gson().toJson(tables);

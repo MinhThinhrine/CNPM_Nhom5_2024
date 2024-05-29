@@ -36,6 +36,10 @@
 <main class="mb-5">
 
     <!-- Container for demo purpose -->
+<%--    //nhấn nút chọn chức năng thêm đơn đặt bàn--%>
+<%--    //luồng xử lý làm việc với java và gọi servlet edit--%>
+<%--    //dẫn tới trang jsp reservation-addition.jsp--%>
+
     <div class="container  px-4 ">
         <div class="mb-3 d-flex justify-content-end px-4">
             <a class="btn btn-primary" href="/admin/reservation-management/edit">
@@ -53,6 +57,7 @@
         <div class="datatable">
             <table class="table align-middle mb-0 bg-white">
                 <thead class="bg-light">
+<%--                //danh sách các thông tin đơn đặt bàn--%>
                 <tr>
                     <th>Id</th>
                     <th>Khách hàng</th>
@@ -66,6 +71,7 @@
                 </tr>
                 </thead>
                 <tbody>
+<%--                //lấy ra dữ liệu--%>
                 <c:forEach items="${reservations}" var="reservation">
                     <tr>
                         <td>
@@ -132,7 +138,7 @@
 <script src="<c:url value="/views/template/assets/js/jquery-2.1.0.min.js"/> "></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-
+    //sử lý sự kiện xoá hiển thị popup cảnh báo
     function deleteReservation(id) {
         Swal.fire({
             title: 'Are you sure?',
@@ -152,6 +158,7 @@
                     data: JSON.stringify({
                         id: id
                     }),
+                    //xoá thành công
                     success: function (data) {
                         if (data) {
                             Swal.fire({
@@ -162,6 +169,7 @@
                                 location.reload();
                             });
                         } else {
+                            //có lỗi
                             Swal.fire({
                                 icon: "error",
                                 title: "Oops...",
