@@ -58,9 +58,10 @@ public class TableAPI extends HttpServlet {
         }
         System.out.println(startTime + " " + endTime);
 
+        // 5.1.4.4.2
         // findTable(startTime, endTime, count)
         // Lấy danh sách tables từ TableService qua phương thức getTables(startTime, endTime, count)
-        tables = tableService.getTables(startTime, endTime, count);
+        tables = tableService.getTables(startTime, endTime, count); // 5.1.4.8 Trả về danh sách List<Table>
 
         if (tables != null) {
             json = new Gson().toJson(tables);

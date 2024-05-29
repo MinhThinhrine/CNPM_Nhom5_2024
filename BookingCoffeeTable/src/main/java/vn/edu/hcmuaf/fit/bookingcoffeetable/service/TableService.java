@@ -52,14 +52,14 @@ public class TableService {
     }
 
 
-    // Phương thức getTables(startTime, endTime, count) trả về danh sách tables từ DAO
+    // 5.1.4.5 Phương thức getTables(startTime, endTime, count) trả về danh sách tables từ DAO
     public List<Table> getTables(String startTime, String endTime, int count) {
         List<Table> tables = tableDAO.getTables(startTime, endTime, count);
         for (Table table : tables) {
             table.setArea(AreaService.getInstance().findById(table.getAreaId()));
             table.setReservations(ReservationService.getInstance().getReservationByTableId(table.getId()));
         }
-
+        // 5.1.4.7 Trả về List<Table>
         return tables;
 
     }
@@ -87,7 +87,7 @@ public class TableService {
 
     public static void main(String[] args) {
         TableService productService = TableService.getInstance();
-        System.out.println(productService.getTables("1", "2021-05-05 10:00:00",  2 ));
+        System.out.println(productService.getTables("2024-5-15 00:00:00", "2024-5-15 1:00:00",  2 ));
     }
 
 }

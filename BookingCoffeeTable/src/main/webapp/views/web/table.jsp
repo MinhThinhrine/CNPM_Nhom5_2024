@@ -168,7 +168,7 @@
     let currentPage = 1;
     const limit = 9;
     let count = $('#filterPeople').val();
-    let startTime = "0000-00-00 00:00:00";
+    let startTime = "2024-00-00 00:00:00";
     let endTime = "0000-00-00 00:00:00";
 
 
@@ -248,6 +248,7 @@
         return false;
     }
 
+    // 5.1.4.4.2 và 5.1.4.10
     // Phương thức xử lý ajaxRun để gửi yêu cầu AJAX đến máy chủ và nhận kết quả trả về.
     // Phương thức này nhận ba tham số: startTime, endTime và count.
     // Cách thức hoạt động:
@@ -265,7 +266,7 @@
             headers: {Accept: "application/json;charset=utf-8"},
             success: function (json) {
                 let data = "";
-                let obj = json;
+                let obj = json; // 5.1.4.9 Nhận danh sách List<Table> từ máy chủ
                 for (let i = 0; i < obj.length; i++) {
                     let val = obj[i];
                     // onclick="return theFunction();"
@@ -284,7 +285,7 @@
                         + "</div>"
                         + "</div>";
                 }
-                $("#yourContainer").html(data);
+                $("#yourContainer").html(data); // 5.1.4.10 Render dữ liệu ra trang table.jsp
             }
         });
     }
