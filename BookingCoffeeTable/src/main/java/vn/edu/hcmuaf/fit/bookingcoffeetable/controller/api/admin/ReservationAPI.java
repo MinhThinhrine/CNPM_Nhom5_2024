@@ -43,7 +43,7 @@ public class ReservationAPI extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
 
-        String userID = request.getParameter("userID");
+        String userId = request.getParameter("userId");
         String tableNum = request.getParameter("tableNum");
         String filterDate = request.getParameter("filterDate");
         String filterStartTime = request.getParameter("filterStartTime");
@@ -52,12 +52,12 @@ public class ReservationAPI extends HttpServlet {
         String totalPrice = request.getParameter("totalPrice");
         String status = request.getParameter("status");
         Reservation reservation = new Reservation();
-        reservation.setUserId(Integer.parseInt(userID));
+        reservation.setUserId(Integer.parseInt(userId));
         reservation.setTableId(Integer.parseInt(tableNum));
 
         reservation.setStartTime(filterDate + " " + filterStartTime);
         reservation.setEndTime(filterDate + " " + filterEndTime);
-//        reservation.setTotalPrice(totalCost);
+        reservation.setTotalPrice(Double.parseDouble(totalPrice));
 
         System.out.println(reservation);
         reservation = reservationService.save(reservation);
