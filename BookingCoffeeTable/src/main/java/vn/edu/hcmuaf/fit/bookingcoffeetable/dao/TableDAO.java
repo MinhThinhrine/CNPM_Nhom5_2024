@@ -43,9 +43,9 @@ public interface TableDAO {
     @SqlQuery(QUERIES.TABLE.SELECT_TABLE_FILTER)
     List<Table> findTablesFilter(@Bind("location") String location, @Bind("seatCount") int seatCount, @Bind("endTime") String endTime, @Bind("startTime") String startTime);
 
-    // Truy vấn dữ liệu lấy ra danh sách bàn
+
     @SqlQuery(QUERIES.TABLE.SELECT_TABLE_PAGE)
-    List<Table> getTables(@Bind("startTime") String startTime, @Bind("endTime")  String endTime, @Bind("count") int count);
+    List<Table> getTables(@Bind("areaId") String areaId, @Bind("startTime") String startTime, @Bind("endTime")  String endTime, @Bind("count") int count, @Bind("find") String find, @Bind("limit") int limit, @Bind("offset") int offset);
 
     @SqlQuery(QUERIES.TABLE.COUNT_TABLE)
     String totalItem();

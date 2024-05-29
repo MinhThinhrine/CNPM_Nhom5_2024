@@ -52,9 +52,8 @@ public class TableService {
     }
 
 
-    // Phương thức getTables(startTime, endTime, count) trả về danh sách tables từ DAO
-    public List<Table> getTables(String startTime, String endTime, int count) {
-        List<Table> tables = tableDAO.getTables(startTime, endTime, count);
+    public List<Table> getTables(String areaId, String startTime, String endTime, int count, String find, int limit, int offset) {
+        List<Table> tables = tableDAO.getTables(areaId, startTime, endTime, count, find, limit, offset);
         for (Table table : tables) {
             table.setArea(AreaService.getInstance().findById(table.getAreaId()));
             table.setReservations(ReservationService.getInstance().getReservationByTableId(table.getId()));
@@ -87,7 +86,7 @@ public class TableService {
 
     public static void main(String[] args) {
         TableService productService = TableService.getInstance();
-        System.out.println(productService.getTables("1", "2021-05-05 10:00:00",  2 ));
+        System.out.println(productService.getTables("1", "2021-05-05 10:00:00", "2021-05-05 12:00:00", 2, "", 2, 0));
     }
 
 }

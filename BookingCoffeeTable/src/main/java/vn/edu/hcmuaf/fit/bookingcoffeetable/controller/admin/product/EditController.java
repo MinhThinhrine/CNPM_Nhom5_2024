@@ -26,8 +26,9 @@ public class EditController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
+//        Lấy ra danh sách danh mục món
         request.setAttribute("categories", categoryService.findAllCategory());
-
+//        Lấy ra món ăn theo id
         if (id != null) {
             Product product = productService.findOne(Integer.parseInt(id));
             request.setAttribute("product", product);

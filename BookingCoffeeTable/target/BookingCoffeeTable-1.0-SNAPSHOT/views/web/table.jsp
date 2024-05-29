@@ -168,9 +168,26 @@
     let currentPage = 1;
     const limit = 9;
     let count = $('#filterPeople').val();
+    let text = "";
+    let category = $('#category').val();
+    let areaValue = 0;
     let startTime = "0000-00-00 00:00:00";
     let endTime = "0000-00-00 00:00:00";
 
+    // Đặt sự kiện click cho các liên kết danh mục
+    var areaLinks = document.querySelectorAll('.area-link');
+    areaLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Lấy giá trị danh mục từ thuộc tính data-category-value
+            areaValue = this.getAttribute('data-category-value');
+
+            // Hiển thị giá trị trong console (có thể thay đổi thành việc xử lý giá trị theo yêu cầu của bạn)
+            console.log("Selected category value: " + areaValue);
+            ajaxRun(count, text, '', '', areaValue);
+        });
+    });
 
     $(function () {
         window.pagObj = $('#pagination').twbsPagination({
@@ -181,30 +198,46 @@
                 if (currentPage != page) {
                     currentPage = page;
                     count = $('#filterPeople').val();
-                    ajaxRun(startTime, endTime, count);
+                    ajaxRun(count, text, '', '', areaValue);
                 }
             }
         });
     });
 
-    // 5.1.4.2 Hàm find() để tìm kiếm bàn trống
+
     $('#find').click(function () {
         count = 0;
-        //Kiểm tra xem phần tử có ID là filterDate có giá trị hay không. Nếu có, nghĩa là người dùng đã chọn ngày đặt bàn.
+        var currentDate = new Date();
+        var currentDateTimePlus15Minutes = new Date();
+        currentDateTimePlus15Minutes.setMinutes(currentDateTimePlus15Minutes.getMinutes() + 15);
+
         if ($('#filterDate').val()) {
-            //Tạo chuỗi thời gian bắt đầu (startTime) và thời gian kết thúc (endTime)
-            // bằng cách kết hợp ngày đặt bàn với giờ phút được chọn từ các phần tử tương ứng.
             startTime = $('#filterDate').val() + " " + $('#filterStartTime').val() + ":00";
             endTime = $('#filterDate').val() + " " + $('#filterEndTime').val() + ":00";
 
-            // count = $('#filterPeople').val();
+            var parsedStartTime = new Date(startTime);
+            var parsedEndTime = new Date(endTime);
             count = $('#filterPeople').val();
+            // Kiểm tra điều kiện
 
-            // Gọi hàm checkTime với các tham số startTime và endTime. Nếu hàm trả về true,
-            // nghĩa là thời gian hợp lệ, sau đó gọi hàm ajaxRun với các tham số cần thiết để thực hiện yêu cầu AJAX.
-            if (checkTime(startTime, endTime)) {
-                ajaxRun(startTime, endTime, count);
-            }
+            if (parsedStartTime > currentDateTimePlus15Minutes) {
+                if (parsedEndTime > parsedStartTime) {
+                    ajaxRun(count, text, startTime, endTime, areaValue);
+                } else Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Thời gian kết thúc phải lớn hơn thời gian bắt đầu 15 phút!",
+                });
+
+
+            } else
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Thời gian bắt đầu phải lớn hơn thời gian hiện tại 15 phút!",
+                });
+            ;
+
 
         } else {
             Swal.fire({
@@ -212,54 +245,64 @@
                 title: "Oops...",
                 text: "Vui lòng chọn ngày đặt bàn!",
             });
+
         }
     });
 
-    // 5.1.4.3 Hàm checkTime để kiểm tra giờ
-    function checkTime(startTime, endTime) {
-        var currentDate = new Date(); // Tạo đối tượng Date lấy giờ hiện tại
-        var currentDateTimePlus15Minutes = new Date(); // Tạo một đối tượng Date mới
-        currentDateTimePlus15Minutes.setMinutes(currentDateTimePlus15Minutes.getMinutes() + 15); // và thiết lập phút của nó cộng thêm 15 phút so với thời gian hiện tại.
 
-        // Chuyển đổi chuỗi thời gian bắt đầu (startTime) và thời gian kết thúc (endTime) sang đối tượng Date.
-        var parsedStartTime = new Date(startTime);
-        var parsedEndTime = new Date(endTime);
+    $("#search-text").on('keyup', function () {
+        currentPage = 1; // Đặt lại currentPage về 1 khi có sự kiện tìm kiếm
+        text = $(this).val();
+        console.log(text);
 
-        // Nếu thời gian bắt đầu (parsedStartTime) lớn hơn thời gian hiện tại cộng 15 phút (currentDateTimePlus15Minutes),
-        // thì tiếp tục kiểm tra tiếp theo.
-        if (parsedStartTime > currentDateTimePlus15Minutes) {
-            if (parsedEndTime > parsedStartTime) { // Nếu thời gian kết thúc (parsedEndTime) lớn hơn thời gian bắt đầu (parsedStartTime), hàm trả về true.
-                return true;
-            } else { // Ngược lại, hiện thông báo lỗi bằng Swal.fire và trả về false.
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Thời gian kết thúc phải lớn hơn thời gian bắt đầu 15 phút!",
-                });
+        // Gọi hàm update của twbsPagination để cập nhật giá trị currentPage
+        window.pagObj.twbsPagination('destroy'); // Hủy bỏ phân trang hiện tại
+        window.pagObj = $('#pagination').twbsPagination({
+            totalPages: totalPages,
+            visiblePages: 5,
+            startPage: currentPage,
+            onPageClick: function (event, page) {
+                if (currentPage != page) {
+                    currentPage = page;
+
+                    ajaxRun(count, text, '', '', areaValue);
+                }
             }
-        } else { //Nếu thời gian bắt đầu (parsedStartTime) không lớn hơn thời gian hiện tại cộng 15 phút (currentDateTimePlus15Minutes),
-            // hiện thông báo lỗi bằng Swal.fire và trả về false.
+        });
+        count = 1;
+        ajaxRun(count, text, '', '', areaValue);
+    });
+
+    function yourButtonClick(button) {
+        // Lấy giá trị từ các trường date, startTime, và endTime
+        var selectedDate = $('#filterDate').val();
+        var selectedStartTime = $('#filterStartTime').val();
+        var selectedEndTime = $('#filterEndTime').val();
+
+        var parsedStartTime = new Date(selectedDate + " " + selectedStartTime);
+        var parsedEndTime = new Date(selectedDate + " " + selectedEndTime);
+        var currentDateTime = new Date();
+
+        // Kiểm tra điều kiện
+        if (parsedStartTime > currentDateTime && parsedEndTime > parsedStartTime) {
+            // Nếu điều kiện đúng, thực hiện hành động của bạn (ví dụ: chuyển hướng đến trang home.html)
+            window.location.href = 'home.html';
+        } else {
+            // Ngược lại, hiển thị cảnh báo hoặc thực hiện các hành động khác
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "Thời gian bắt đầu phải lớn hơn thời gian hiện tại 15 phút!",
+                text: "Vui lòng chọn thời gian hợp lệ!",
             });
         }
-        return false;
     }
 
-    // Phương thức xử lý ajaxRun để gửi yêu cầu AJAX đến máy chủ và nhận kết quả trả về.
-    // Phương thức này nhận ba tham số: startTime, endTime và count.
-    // Cách thức hoạt động:
-    // `1. ửi các tham số từ người dùng nhập
-    // `2. Gửi yêu cầu AJAX đến máy chủ
-    // `3. Nhận kết quả trả về từ máy chủ
-    // `4. Hiển thị kết quả trả về lên trang web (render dữ liệu ra trang table.jsp)
-    function ajaxRun(startTime, endTime, count) {
+
+    function ajaxRun(count, text, startTime, endTime, areaValue) {
         $.ajax({
             type: "Post",
 
-            url: "/tables?count=" + count +  "&startTime=" + startTime + "&endTime=" + endTime ,
+            url: "/tables?page-index=" + currentPage + "&per-page=" + limit + "&count=" + count + "&text=" + text + "&startTime=" + startTime + "&endTime=" + endTime + "&areaValue=" + areaValue,
 
             ContentType: 'json',
             headers: {Accept: "application/json;charset=utf-8"},
@@ -289,7 +332,24 @@
         });
     }
 
-    ajaxRun(startTime, endTime, count);
+    ajaxRun(count, text, startTime, endTime, areaValue);
+
+    function checkTimeAndRedirect(tableId, startTime, endTime) {
+        if (startTime === "0000-00-00 00:00:00" || endTime === "0000-00-00 00:00:00") {
+            // Nếu có giá trị cho cả startTime và endTime, chuyển hướng trang
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Vui lòng chọn giờ trước khi đặt bàn!",
+            });
+        } else {
+            // Nếu thiếu giá trị, hiển thị thông báo hoặc thực hiện hành động khác
+
+            console.log(startTime);
+            location.href = '/add-table?id=' + tableId + '&startTime=' + startTime + '&endTime=' + endTime;
+            // Hoặc có thể thực hiện hành động khác ở đây
+        }
+    }
 
 </script>
 

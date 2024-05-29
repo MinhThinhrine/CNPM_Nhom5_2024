@@ -50,6 +50,8 @@
                     <i class="fas fa-bars"></i>
                     <select class="form-select" id="category" name="category" required>
                         <option value="" disabled>--Chọn danh mục món--</option>
+
+<%--                       kiểm tra chọn danh mục món--%>
                         <c:forEach items="${categories}" var="category">
                             <c:choose>
                                 <c:when test="${category.id == product.categoryId}">
@@ -63,6 +65,7 @@
                     </select>
                 </div>
 
+                <%--Nhập thông tin món muốn thêm--%>
                 <div class="col-md-4">
                     <label for="name" class="form-label"><b>Tên món</b></label>
                     <i class="fas fa-mug-saucer"></i>

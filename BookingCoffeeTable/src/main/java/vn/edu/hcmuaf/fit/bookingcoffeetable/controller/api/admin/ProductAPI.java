@@ -43,6 +43,7 @@ public class ProductAPI extends HttpServlet {
         Gson gson = new Gson();
         request.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
+//        lấy ra thông tin nhập vào từ giao diện
         String name = request.getParameter("name");
         String price = request.getParameter("price");
         String categoryId = request.getParameter("category");
@@ -54,8 +55,9 @@ public class ProductAPI extends HttpServlet {
         String[] prices = request.getParameterValues("price[]");
         ProductVariant productVariant = new ProductVariant();
 
-
+//         tạo đối tượng product mới
         Product product = new Product();
+//        set giá trị nhận vào từ giao diện cho các thuộc tính của product
         product.setName(name);
         product.setPrice(Integer.parseInt(price));
         product.setCategoryId(Integer.parseInt(categoryId));
@@ -128,7 +130,7 @@ public class ProductAPI extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
         String count = request.getParameter("id");
-
+//        lấy ra thông tin nhập vào từ giao diện
         String name = request.getParameter("name");
         String price = request.getParameter("price");
         String categoryId = request.getParameter("category");
@@ -192,7 +194,7 @@ public class ProductAPI extends HttpServlet {
         } else {
             // Xử lý trường hợp không có dữ liệu hoặc dữ liệu không tương thích
         }
-
+// update giá trị
         Product product = new Product();
         product.setName(name);
         product.setPrice(Integer.parseInt(price));
