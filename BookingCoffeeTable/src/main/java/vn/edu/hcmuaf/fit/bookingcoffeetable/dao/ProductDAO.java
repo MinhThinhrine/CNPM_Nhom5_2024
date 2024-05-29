@@ -11,6 +11,8 @@ import java.util.List;
 
 @RegisterBeanMapper(Product.class)
 public interface ProductDAO {
+
+//    sql insert product mới
     @SqlUpdate(QUERIES.PRODUCT.INSERT_PRODUCT)
     void insertProduct(@Bind("categoryId") int categoryId, @Bind("name") String name, @Bind("price") int price, @Bind("description") String description, @Bind("status") int status, @Bind("discount") int discount);
 
@@ -44,6 +46,7 @@ public interface ProductDAO {
     @SqlQuery(QUERIES.PRODUCT.COUNT_PRODUCT)
     String totalItem();
 
+//    cau sql update
     @SqlUpdate(QUERIES.PRODUCT.UPDATE_PRODUCT)
     void updateProduct(@Bind("id") int id, @Bind("categoryId") int categoryId, @Bind("name") String name, @Bind("price") int price, @Bind("description") String description, @Bind("status") int status, @Bind("discount") int discount);
 

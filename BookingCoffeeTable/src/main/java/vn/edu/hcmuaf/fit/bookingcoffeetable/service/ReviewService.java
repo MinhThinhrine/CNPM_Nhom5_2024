@@ -46,6 +46,7 @@ public class ReviewService {
     public void deleteReview(int id) {
         reviewDAO.deleteReview(id);
     }
+//    Phương thức delete product với id
     public void delete(int id) {
         reviewDAO.delete(id);
     }

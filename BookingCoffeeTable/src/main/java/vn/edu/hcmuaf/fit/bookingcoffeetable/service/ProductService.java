@@ -133,13 +133,13 @@ public class ProductService {
     public String totalItem() {
         return productDAO.totalItem();
     }
-
+//Phương thức lưu product mới
     public Product saveProduct(Product product) {
         System.out.println(product.getCategoryId() + " " + product.getName() + " " + product.getPrice() + " " + product.getDescription() + " " + product.getStatus() + " " + product.getDiscount());
         productDAO.insertProduct(product.getCategoryId(), product.getName(), product.getPrice(), product.getDescription(), product.getStatus(), product.getDiscount());
         return findOne(product.getId());
     }
-
+// phương thức update product
     public Product updateProduct(Product product) {
         productDAO.updateProduct(product.getId(), product.getCategoryId(), product.getName(), product.getPrice(), product.getDescription(), product.getStatus(), product.getDiscount());
         return findOne(product.getId());
