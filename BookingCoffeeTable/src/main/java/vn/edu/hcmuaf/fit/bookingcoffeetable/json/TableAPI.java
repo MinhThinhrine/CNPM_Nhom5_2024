@@ -20,7 +20,7 @@ import java.util.List;
         @WebInitParam(name = "page-index", value = "1"),
         @WebInitParam(name = "per-page", value = "9")
 })
-public class ListTablesJson extends HttpServlet {
+public class TableAPI extends HttpServlet {
     private TableService tableService;
     private List<Table> tables;
     private String json;
@@ -35,7 +35,7 @@ public class ListTablesJson extends HttpServlet {
 
     PageRequest pageRequest = null;
 
-    public ListTablesJson() {
+    public TableAPI() {
         tableService = TableService.getInstance();
     }
 
